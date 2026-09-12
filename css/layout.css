@@ -21,7 +21,6 @@ header {
   left: 0;
   width: 100%;
   z-index: 1000;
-  /* Biztonsági tartalék szín (sötét, 80%-os átlátszóság), ha a var(--glass) hiányozna */
   background: var(--glass, rgba(15, 23, 42, 0.85));
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -86,22 +85,20 @@ header {
   width: 100%;
 }
 
-/* Képkeret: szigorúan fix méret és overflow elrejtés */
 .hero-image-wrapper {
   flex: 0 0 180px;
   width: 180px;
   height: 180px;
   border-radius: 50%;
   padding: 3px;
-  background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
+  background: linear-gradient(45deg, var(--accent-cyan, #00f2fe), var(--accent-purple, #4facfe));
   box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Ez akadályozza meg, hogy a kép kilógjon */
+  overflow: hidden;
 }
 
-/* Kép kényszerítése a kereten belülre (erősebb selector a main.css felülírására) */
 .hero-image-wrapper img.hero-profile-img {
   width: 100%;
   height: 100%;
@@ -123,14 +120,14 @@ header {
   line-height: 1.2;
   letter-spacing: -1px;
   margin-bottom: 1.5rem;
-  background: linear-gradient(180deg, #ffffff 0%, var(--text-muted) 100%);
+  background: linear-gradient(180deg, #ffffff 0%, var(--text-muted, #94a3b8) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero p {
   font-size: 1.15rem;
-  color: var(--text-muted);
+  color: var(--text-muted, #94a3b8);
   line-height: 1.6;
   margin-bottom: 0;
 }
@@ -156,46 +153,13 @@ section {
 }
 
 .section-desc {
-  color: var(--text-muted);
+  color: var(--text-muted, #94a3b8);
   font-size: 1.05rem;
 }
 
-/* --- Footer --- */
-footer {
-  text-align: center;
-  padding: 4rem 2rem 2rem;
-  border-top: 1px solid var(--border-color);
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-/* --- Responsive Breakpoints --- */
-@media (max-width: 868px) {
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .hero-content {
-    text-align: center;
-  }
-
-  .hero-image-wrapper {
-    flex: 0 0 150px;
-    width: 150px;
-    height: 150px;
-  }
-
-  .hero h1 {
-    font-size: 2.3rem;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-   /* --- Services Grid / Kártyák --- */
+/* ==========================================
+   SERVICES GRID & CARDS (Most már helyesen, globálisan!)
+   ========================================== */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -252,5 +216,40 @@ footer {
   margin: 0;
 }
 
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  border-top: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  color: var(--text-muted, #94a3b8);
+  font-size: 0.9rem;
+}
 
+/* ==========================================
+   RESPONSIVE BREAKPOINTS (Csak a mobil beállítások)
+   ========================================== */
+@media (max-width: 868px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-image-wrapper {
+    flex: 0 0 150px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
 }
