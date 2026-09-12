@@ -13,14 +13,27 @@ const videos = [
      {
     id: "SLnCjCTzyK0",
     title: "WHO SHOULD DECIDE — Music Cosmos",
-    description: "Kísérő szöveg vagy rövid leírás a videóhoz.",
+    description: "Döntős helyezés az Amazon Frontlines zeneszerző versenyén.",
     poster: "https://img.youtube.com/vi/SLnCjCTzyK0/hqdefault.jpg"
   },
+   {
+    id: "qLRmNFddtgA",
+    title: "Stargirl",
+    description: "Egyedi zeneszerzés filmekhez.",
+    poster: "https://img.youtube.com/vi/qLRmNFddtgA/hqdefault.jpg"
+   },
+   
+   {
+    id: "EnJzh_8LiT0",
+    title: "Sprite Fright",
+    description: "Zeneszerzés filmekhez.",
+    poster: "https://img.youtube.com/vi/EnJzh_8LiT0/hqdefault.jpg"
+   },
    
   {
     id: "-GozvYoGRDY",
     title: "Piper Music - Trailer",
-    description: "Videó vágás, zeneszerzés.",
+    description: "Videó vágás, zeneszerzés, AI narráció.",
     poster: "https://img.youtube.com/vi/-GozvYoGRDY/hqdefault.jpg"
   }
 ];
