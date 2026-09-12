@@ -1,5 +1,5 @@
 /* ==========================================
-   PIPER MEDIA - MINIMAL LIGHTBOX LOGIC
+   PIPER MEDIA - LIGHTBOX LOGIC
    ========================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -12,8 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const Lightbox = (() => {
   const getElements = () => ({
     modal: document.getElementById('videoModal'),
-    modalIframe: document.getElementById('modalIframe'),
-    backdrop: document.querySelector('.modal-backdrop')
+    modalIframe: document.getElementById('modalIframe')
   });
 
   /**
@@ -24,12 +23,16 @@ const Lightbox = (() => {
     const { modal, modalIframe } = getElements();
     if (!modal || !modalIframe) return;
 
-    // controls=1 -> Vezérlősáv látható (beletekeréshez)
-    // controls=0 -> Teljesen tiszta videó vezérlők nélkül
-    modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&rel=0&modestbranding=1`;
+    // Optimalizált YouTube URL paraméterek a maximális letisztultsághoz
+    modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1&rel=0&modestbranding=1&autohide=1&showinfo=0&fs=1`;
 
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
+
+    // Fókusz a videóra a billentyűzetes tekeréshez (Bal/Jobb nyíl, Szóköz)
+    setTimeout(() => {
+      modalIframe.focus();
+    }, 100);
   };
 
   /**
