@@ -51,11 +51,11 @@ header {
 
 /* --- Hero Section --- */
 .hero {
-  min-height: 70vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8rem 2rem 4rem;
+  padding: 8rem 2rem 3rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -63,18 +63,18 @@ header {
 .hero-container {
   display: flex;
   align-items: center;
-  gap: 3.5rem;
+  gap: 2.5rem; /* Kisebb hézag a kép és a szöveg között */
   width: 100%;
 }
 
 .hero-image-wrapper {
   flex-shrink: 0;
-  width: 260px;
-  height: 260px;
+  width: 190px;  /* Kisebb, letisztultabb átmérő */
+  height: 190px;
   border-radius: 50%;
-  padding: 3px;
+  padding: 2px;  /* Vékonyabb gradiens szegély */
   background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .hero-profile-img {
@@ -86,28 +86,53 @@ header {
 }
 
 .hero-content {
-  max-width: 700px;
+  max-width: 750px;
   text-align: left;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -1px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   background: linear-gradient(180deg, #ffffff 0%, var(--text-muted) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 0;
 }
 
+/* --- Reszponzivitás mobilon --- */
+@media (max-width: 868px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-image-wrapper {
+    width: 150px; /* Mobilon még kompaktabb */
+    height: 150px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
 /* --- Sections Common --- */
 section {
   padding: 5rem 2rem;
