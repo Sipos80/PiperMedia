@@ -22,30 +22,17 @@
     </div>
   </header>
 
-  <!-- Fő tartalom kártyával -->
-  <main style="padding: 4rem 2rem; max-width: 900px; margin: 0 auto;">
+  <!-- Fő tartalom -->
+  <main class="container">
     
-    <h1 style="text-align: center; margin-bottom: 2rem; color: #fff;">Videó Lejátszó Teszt</h1>
+    <h1 class="section-title">A referencia videóink</h1>
 
-    <!-- VIDEÓ KÁRTYA -->
-    <div class="video-card" data-video-id="bHW7389uW0Y" data-title="Filmzene - Bridgerton">
-      <div class="thumbnail-wrapper">
-        <img src="https://img.youtube.com/vi/bHW7389uW0Y/hqdefault.jpg" alt="Videó borítókép">
-        <div class="play-btn">
-          <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#000" d="M8 5v14l11-7z"/></svg>
-        </div>
-      </div>
-      <div class="card-body" style="padding: 1.5rem;">
-        <h3 class="card-title" style="margin-bottom: 0.5rem; color: #fff;">Bridgerton</h3>
-        <p class="card-text" style="color: #aaa;">Egyedi zeneszerzés a Bridgerton sorozat egyik jelenetéhez.</p>
-      </div>
-    </div>
+    <!-- DINAMIKUS VIDEÓ RÁCS (A js/video-cards.js ide szúrja be a kártyákat) -->
+    <div id="videoGrid" class="video-grid"></div>
 
   </main>
 
-<!-- ==========================================
-       MINIMÁL FULLSCREEN LIGHTBOX
-       ========================================== -->
+  <!-- FULLSCREEN LIGHTBOX MODAL -->
   <div id="videoModal" class="video-modal">
     <div class="modal-backdrop"></div>
     <div class="modal-content">
