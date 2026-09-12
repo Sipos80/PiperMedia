@@ -1,18 +1,42 @@
 /* ==========================================
-   PIPER MEDIA - VIDEO CARDS HANDLER
+   PIPER MEDIA - VIDEÓK ADATAI ÉS KÁRTYA GENERÁLÓ
    ========================================== */
 
-document.addEventListener('DOMContentLoaded', () => {
-  const videoCards = document.querySelectorAll('.video-card');
+// 1. VIDEÓK LISTÁJA
+const videos = [
+  {
+    id: "bHW7389uW0Y",
+    title: "WHO SHOULD DECIDE — Music Cosmos",
+    description: "Kísérő szöveg vagy rövid leírás a videóhoz.",
+    poster: "https://img.youtube.com/vi/bHW7389uW0Y/hqdefault.jpg"
+  },
+  {
+    id: "YOUTUBE_ID_2",
+    title: "Második videó címe",
+    description: "Kísérő szöveg a második videóhoz.",
+    poster: "images/poster2.jpg"
+  }
+];
 
-  videoCards.forEach((card) => {
-    card.addEventListener('click', () => {
-      const videoId = card.getAttribute('data-video-id');
-      const videoTitle = card.getAttribute('data-title') || 'PIPER MEDIA CINEMATIC PLAYER';
+// 2. KÁRTYÁK KIRAKÁSA AZ OLDAL BETÖLTÉSEKOR
+document.addEventListener("DOMContentLoaded", () => {
+  const grid = document.getElementById("videoGrid");
+  if (!grid) return;
 
-      if (videoId && typeof Lightbox !== 'undefined') {
-        Lightbox.open(videoId, videoTitle);
-      }
-    });
-  });
+  grid.innerHTML = videos.map(video => `
+    <div class="video-card" onclick="Lightbox.open('${video.id}')">
+      <div class="thumbnail-wrapper">
+        <img src="${video.poster}" alt="${video.title}" loading="lazy">
+        <div class="play-btn">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="#fff">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="card-body">
+        <h3 class="card-title">${video.title}</h3>
+        <p class="card-text">${video.description}</p>
+      </div>
+    </div>
+  `).join('');
 });
