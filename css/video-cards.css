@@ -17,21 +17,32 @@
   margin-top: 2rem;
 }
 
-/* Kártya alapvető méretezése */
+/* Kártya alapvető méretezése és neon keret */
 .video-card {
   width: 100%;
-  background: #1a1a1a;
-  border-radius: 12px;
+  background: var(--bg-card, #12151e);
+  border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
+  position: relative;
+  
+  /* Alapértelmezett finom neon keret és sejtelmes glow */
+  border: 1px solid rgba(0, 242, 254, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 12px rgba(0, 242, 254, 0.1);
+  
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover állapot: Erőteljes Cyan-Purple Glow */
 .video-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transform: translateY(-6px);
+  border-color: var(--accent-cyan, #00f2fe);
+  box-shadow: 
+    0 12px 30px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(0, 242, 254, 0.35),
+    0 0 40px rgba(79, 172, 254, 0.15);
 }
 
 /* Kép méretezése és 16:9 képarány */
@@ -48,9 +59,14 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s ease;
 }
 
-/* Play gomb középre igazítása és animációja */
+.video-card:hover .thumbnail-wrapper img {
+  transform: scale(1.05);
+}
+
+/* Play gomb középre igazítása és neon animációja */
 .play-btn {
   position: absolute;
   top: 50%;
@@ -58,17 +74,22 @@
   transform: translate(-50%, -50%);
   width: 56px;
   height: 56px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid var(--accent-cyan, #00f2fe);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s ease, transform 0.3s ease;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+  transition: all 0.3s ease;
 }
 
 .video-card:hover .play-btn {
-  background: #e50914;
-  transform: translate(-50%, -50%) scale(1.1);
+  background: var(--accent-cyan, #00f2fe);
+  color: #000000;
+  transform: translate(-50%, -50%) scale(1.12);
+  box-shadow: 0 0 25px rgba(0, 242, 254, 0.8);
 }
 
 /* Kártya szöveges része */
@@ -88,7 +109,7 @@
 
 .card-text {
   font-size: 0.9rem;
-  color: #aaa;
+  color: var(--text-muted, #94a3b8);
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.5;
 }
