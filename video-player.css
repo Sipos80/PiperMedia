@@ -1,17 +1,76 @@
 /* ==========================================
-   VIDEO PLAYER & YOUTUBE EMBEDS
+   PROFI CINEMATIC VIDEO PLAYER MODULE
    ========================================== */
 
-.cinematic-video-card {
+.player-wrapper {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: 20px;
   overflow: hidden;
-  max-width: 960px;
+  max-width: 980px;
   margin: 0 auto 3rem auto;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 
+              0 0 40px rgba(0, 242, 254, 0.08);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
+.player-wrapper:hover {
+  border-color: rgba(0, 242, 254, 0.3);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8), 
+              0 0 50px rgba(0, 242, 254, 0.15);
+}
+
+/* --- Studio Bar (Felső ablak keret) --- */
+.player-header {
+  background: rgba(15, 18, 26, 0.95);
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.window-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.player-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.player-status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.live-indicator {
+  width: 7px;
+  height: 7px;
+  background-color: var(--accent-cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-cyan);
+}
+
+/* --- Responsive 16:9 Iframe Container --- */
 .responsive-iframe {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 arány */
@@ -29,30 +88,21 @@
   border: 0;
 }
 
-.cinematic-glow {
-  border-bottom: 1px solid rgba(0, 242, 254, 0.2);
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+/* --- Alsó információs blokk --- */
+.player-footer {
+  padding: 2rem 2.5rem;
+  background: linear-gradient(180deg, rgba(18, 21, 30, 0.6) 0%, rgba(9, 10, 15, 0.9) 100%);
 }
 
-.cinematic-info {
-  padding: 2.5rem;
-}
-
-.cinematic-info h3 {
+.player-footer h3 {
   font-size: 1.5rem;
   font-weight: 800;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
   letter-spacing: -0.5px;
 }
 
-.cinematic-info p {
+.player-footer p {
   color: var(--text-muted);
-  font-size: 1rem;
+  font-size: 0.98rem;
   line-height: 1.6;
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
 }
