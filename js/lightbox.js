@@ -26,7 +26,7 @@ const Lightbox = (() => {
 
     // controls=1 -> Vezérlősáv látható (beletekeréshez)
     // controls=0 -> Teljesen tiszta videó vezérlők nélkül
-    modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1&rel=0&modestbranding=1`;
+    modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&rel=0&modestbranding=1`;
 
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
