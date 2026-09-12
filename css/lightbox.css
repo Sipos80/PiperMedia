@@ -58,7 +58,7 @@
 /* Bezáró gomb (X) */
 .modal-close {
   position: absolute !important;
-  top: 12px !important;
+  top: 10px !important;
   right: 18px !important;
   background: transparent !important;
   border: none !important;
@@ -78,22 +78,17 @@
 .player-header {
   display: flex !important;
   align-items: center !important;
-  justify-content: space-between !important;
-  padding: 14px 20px !important;
+  justify-content: flex-start !important; /* Balra igazítás */
+  gap: 20px !important; /* Térköz az elemek között */
+  padding: 14px 60px 14px 20px !important; /* Jobb oldalon hely hagyása az X gombnak */
   background: #141722 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-}
-
-.player-title {
-  color: #fff !important;
-  font-size: 0.9rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.5px;
 }
 
 .window-dots {
   display: flex;
   gap: 6px;
+  flex-shrink: 0;
 }
 
 .dot {
@@ -107,6 +102,17 @@
 .dot.yellow { background: #ffbd2e; }
 .dot.green { background: #27c93f; }
 
+.player-title {
+  color: #fff !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 4K HDR kijelző eltolva balra a cím után */
 .player-status {
   color: #00f2fe;
   font-size: 0.8rem;
@@ -114,6 +120,8 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  margin-left: auto; /* Elválasztja a címtől, de az X gomb előtt áll meg */
+  padding-right: 10px;
 }
 
 .live-indicator {
