@@ -8,7 +8,7 @@ const videos = [
    {
       id: "SLnCjCTzyK0",
       title: "WHO SHOULD DECIDE — Music Cosmos",
-      description: "Döntős helyezés az Amazon Frontlines zeneszerző versenyén.",
+      description: "Elődöntős helyezés az Amazon Frontlines zeneszerző versenyén, ahol 500-nál is több nevező közül bejutottam a legjobb 10 közé.",
       poster: "https://img.youtube.com/vi/SLnCjCTzyK0/hqdefault.jpg"
    },
    {
@@ -20,7 +20,7 @@ const videos = [
    {
     id: "a358Gy9Pg1c",
     title: "Végtelen álom",
-    description: "Dalszerzés, végtelen zoom videó Davinci Resolve segítségével.",
+    description: "Dalszerzés, videóvágás. Végtelen zoom videó AI eszközökkel és Davinci Resolve segítségével.",
     poster: "https://img.youtube.com/vi/a358Gy9Pg1c/hqdefault.jpg"
    },
    
@@ -46,10 +46,10 @@ const videos = [
    },
 
    {
-    id: "wHK4ej0ZOQA",
-    title: "The Orchestra Contest",
+    id: "r4qJ9314RqM",
+    title: "Colossus Re-Scoring Competition",
     description: "Egyedi zeneszerzés trailerhez.",
-    poster: "https://img.youtube.com/vi/wHK4ej0ZOQA/hqdefault.jpg"
+    poster: "https://img.youtube.com/vi/r4qJ9314RqM/hqdefault.jpg"
    },
 
    {
