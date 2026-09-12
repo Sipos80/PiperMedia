@@ -108,7 +108,7 @@
     </section>
   </main>
 
-  <!-- Kapcsolat Szekció -->
+<!-- Kapcsolat Szekció -->
   <section id="contact" class="contact-section">
     <div class="section-header">
       <h2 class="section-title">Kapcsolat</h2>
@@ -117,11 +117,38 @@
 
     <div class="contact-card">
       <p>Kérdésed van, vagy árajánlatot szeretnél kérni? Írj bizalommal:</p>
-      <a href="mailto:piper.media.studio@gmail.com" class="contact-email-btn">
-        piper.media.studio@gmail.com
-      </a>
+      
+      <div class="email-action-wrapper">
+        <!-- Megnyitja a levelező programot -->
+        <a href="mailto:piper.media.studio@gmail.com" class="contact-email-btn" title="E-mail küldése">
+          piper.media.studio@gmail.com
+        </a>
+
+        <!-- Kimásolja a címet vágólapra -->
+        <button type="button" id="copyBtn" class="copy-icon-btn" title="E-mail cím másolása" aria-label="E-mail cím másolása">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Visszajelzés másoláskor -->
+      <div id="copyToast" class="copy-toast">E-mail cím kimásolva a vágólapra!</div>
     </div>
   </section>
+
+  <script>
+    document.getElementById('copyBtn').addEventListener('click', function() {
+      navigator.clipboard.writeText('piper.media.studio@gmail.com').then(() => {
+        const toast = document.getElementById('copyToast');
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 2500);
+      });
+    });
+  </script>
 
   <!-- Lábléc -->
   <footer>
