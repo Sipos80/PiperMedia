@@ -6,15 +6,22 @@
 const videos = [
   {
     id: "bHW7389uW0Y",
-    title: "WHO SHOULD DECIDE — Music Cosmos",
-    description: "Kísérő szöveg vagy rövid leírás a videóhoz.",
+    title: "Bridgerton",
+    description: "Egyedi zeneszerzés filmekhez.",
     poster: "https://img.youtube.com/vi/bHW7389uW0Y/hqdefault.jpg"
   },
+     {
+    id: "SLnCjCTzyK0",
+    title: "WHO SHOULD DECIDE — Music Cosmos",
+    description: "Kísérő szöveg vagy rövid leírás a videóhoz.",
+    poster: "https://img.youtube.com/vi/SLnCjCTzyK0/hqdefault.jpg"
+  },
+   
   {
-    id: "YOUTUBE_ID_2",
-    title: "Második videó címe",
-    description: "Kísérő szöveg a második videóhoz.",
-    poster: "images/poster2.jpg"
+    id: "-GozvYoGRDY",
+    title: "Piper Music - Trailer",
+    description: "Videó vágás, zeneszerzés.",
+    poster: "https://img.youtube.com/vi/-GozvYoGRDY/hqdefault.jpg"
   }
 ];
 
