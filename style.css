@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif; /* <-- Montserrat beállítva */
   background-color: var(--bg-dark);
   color: var(--text-main);
   line-height: 1.6;
@@ -94,6 +94,7 @@ header {
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 1.2;
+  letter-spacing: -1px; /* Montserrat-nál a nagy címsorok szebbek szűkebb betűközzel */
   margin-bottom: 1.5rem;
   background: linear-gradient(180deg, #ffffff 0%, var(--text-muted) 100%);
   -webkit-background-clip: text;
@@ -108,11 +109,12 @@ header {
 
 .btn {
   display: inline-block;
-  padding: 0.8rem 2rem;
+  padding: 0.85rem 2.2rem;
   border-radius: 50px;
   background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
   color: #000;
   font-weight: 700;
+  letter-spacing: 0.5px; /* A gombok felirata csupa nagybetűvel vagy vastagon nagyon jól mutat kismértékben széthúzva */
   text-decoration: none;
   box-shadow: 0 4px 20px rgba(0, 242, 254, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -132,6 +134,8 @@ section {
 
 .section-title {
   font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
   margin-bottom: 3rem;
   position: relative;
   display: inline-block;
