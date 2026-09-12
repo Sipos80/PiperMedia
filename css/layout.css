@@ -217,7 +217,7 @@ section {
 }
 
 /* ==========================================
-   CONTACT SECTION & BUTTON
+   CONTACT SECTION & DUAL ACTION BUTTON
    ========================================== */
 .contact-section {
   padding: 4rem 2rem 6rem;
@@ -239,27 +239,61 @@ section {
   margin-bottom: 1.8rem;
 }
 
-/* E-mail gomb stílusa - felülírja a kék hivatkozási színt */
+.email-action-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: linear-gradient(45deg, var(--accent-cyan, #00f2fe), var(--accent-purple, #4facfe));
+  padding: 4px;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 242, 254, 0.25);
+  max-width: 100%;
+}
+
 a.contact-email-btn,
 a.contact-email-btn:visited,
 a.contact-email-btn:hover,
 a.contact-email-btn:active {
-  display: inline-block;
   color: #ffffff !important;
-  font-size: 1.05rem;
+  font-size: 1rem;
   font-weight: 700;
   text-decoration: none !important;
-  padding: 1rem 2.2rem;
-  border-radius: 50px;
-  background: linear-gradient(45deg, var(--accent-cyan, #00f2fe), var(--accent-purple, #4facfe));
-  box-shadow: 0 4px 20px rgba(0, 242, 254, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0.8rem 1.5rem;
   word-break: break-all;
 }
 
-a.contact-email-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0, 242, 254, 0.45);
+.copy-icon-btn {
+  background: rgba(15, 23, 42, 0.6);
+  border: none;
+  color: #ffffff;
+  padding: 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.copy-icon-btn:hover {
+  background: rgba(15, 23, 42, 0.9);
+  transform: scale(1.08);
+}
+
+.copy-toast {
+  opacity: 0;
+  visibility: hidden;
+  color: var(--accent-cyan, #00f2fe);
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-top: 1.2rem;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.copy-toast.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* --- Footer --- */
