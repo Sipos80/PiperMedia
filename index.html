@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Piper Media | Egyedi Zeneszerzés & Videógyártás</title>
 
-  <!-- Montserrat Betűtípus behívása -->
+  <!-- Montserrat Betűtípus -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-  <!-- Stíluslapok behívása -->
+  <!-- Stíluslapok -->
   <link rel="stylesheet" href="main.css?v=1.0">
   <link rel="stylesheet" href="css/layout.css?v=1.0">
   <link rel="stylesheet" href="css/video-cards.css?v=1.0">
@@ -18,50 +18,85 @@
 </head>
 <body>
 
-  <!-- Fejléc (A layout.css osztályaival) -->
+  <!-- Fejléc -->
   <header>
     <div class="nav-container">
       <div class="logo">PIPER MEDIA</div>
-      <!-- Fejléc -->
-      <header>
-        <div class="nav-container">
-          <div class="logo">PIPER MEDIA</div>
-          <ul class="nav-links">
-            <li><a href="#hero">Rólam</a></li>
-            <li><a href="#portfolio">Munkáim</a></li>
-            <li><a href="#contact">Kapcsolat</a></li>
-          </ul>
-        </div>
-      </header>
+      <ul class="nav-links">
+        <li><a href="#hero">Rólam</a></li>
+        <li><a href="#services">Szolgáltatások</a></li>
+        <li><a href="#portfolio">Munkáim</a></li>
+        <li><a href="#contact">Kapcsolat</a></li>
+      </ul>
     </div>
   </header>
 
-  <!-- Hero / Bemutatkozó Szekció -->
-<section class="hero">
-  <div class="hero-container">
-    <div class="hero-image-wrapper">
-      <img src="images/profile.png" alt="Piper Media" class="hero-profile-img">
+  <!-- 1. RÉSZ: Hero / Bevezető (Kép + Tömör bevezető) -->
+  <section id="hero" class="hero">
+    <div class="hero-container">
+      <div class="hero-image-wrapper">
+        <img src="images/profile.png" alt="Piper Media" class="hero-profile-img">
+      </div>
+      <div class="hero-content">
+        <h1>Egyedi filmzenék & vizuális tartalomgyártás</h1>
+        <p>
+          A Piper Media a hatásos történetmesélésről szól — hangban és képben egyaránt. Nemcsak zenét szerzek vagy videót vágok, hanem a kettőt teljesen egymásra hangolva hozom létre a végleges élményt.
+        </p>
+      </div>
     </div>
-    <div class="hero-content">
-      <h1>Egyedi filmzenék & vizuális tartalomgyártás</h1>
-      <p>
-        A Piper Media a hatásos történetmesélésről szól — hangban és képben egyaránt. Nemcsak zenét szerzek vagy videót vágok, hanem a kettőt teljesen egymásra hangolva hozom létre a végleges élményt.
-      </p>
-      <p>
-        Zeneszerzés & Sound Design: Egyedi filmzenék, reklámzenei témák és hanghatások készítése — a dallamos akusztikus hangzástól a modern, elektronikus elemekig.
-      </p>
-      <p>
-        Videófelvétel: Látványos felvételek készítése maximum 4K felbontásban, beépített képstabilizátorral rendelkező kamerával a sima, mozis hatású képsorokért.
-      </p>
-      <p>
-        Vágás & Színkezelés: Teljes körű utómunka DaVinci Resolve rendszerben. A képi ritmust a zene lüktetéséhez igazítom, a színeket pedig a projekt hangulatához hangolom.
-      </p>
+  </section>
+
+  <!-- 2-4. RÉSZ: Szolgáltatás kártyák képekkel -->
+  <section id="services">
+    <div class="section-header">
+      <h2 class="section-title">A folyamat lépései</h2>
+      <p class="section-desc">A koncepciótól a végleges stúdió-masterig minden munkafolyamat egy kézben fut.</p>
     </div>
-  </div>
-</section>
+
+    <div class="services-grid">
+      <!-- 2. RÉSZ: Zeneszerzés -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="images/ableton-live.jpg" alt="Zeneszerzés Ableton Live környezetben">
+        </div>
+        <div class="service-content">
+          <h3>Zeneszerzés & Sound Design</h3>
+          <p>
+            Egyedi filmzenék, reklámzenei témák és hanghatások készítése Ableton Live környezetben — a dallamos akusztikus hangzástól a modern, elektronikus elemekig.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3. RÉSZ: Videófelvétel -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="images/osmo-pocket.jpg" alt="Gimbalos videófelvétel">
+        </div>
+        <div class="service-content">
+          <h3>Mozis Hatású Videófelvétel</h3>
+          <p>
+            Látványos, rezonanciamentes felvételek készítése maximum 4K felbontásban, beépített képstabilizátorral rendelkező kamerával a sima, mozis hatású képsorokért.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4. RÉSZ: Utómunka -->
+      <div class="service-card">
+        <div class="service-image">
+          <img src="images/davinci-resolve.jpg" alt="Vágás és színkezelés DaVinci Resolve-ban">
+        </div>
+        <div class="service-content">
+          <h3>Vágás & Színkezelés</h3>
+          <p>
+            Teljes körű utómunka DaVinci Resolve rendszerben. A képi ritmust a zene lüktetéséhez igazítom, a színeket pedig a projekt hangulatához hangolom.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Portfólió Szekció -->
-  <main>
+  <main id="portfolio">
     <section>
       <div class="section-header">
         <h2 class="section-title">Korábbi munkáim</h2>
@@ -73,7 +108,7 @@
     </section>
   </main>
 
-  <!-- Lábléc (A layout.css osztályaival) -->
+  <!-- Lábléc -->
   <footer>
     <p>&copy; 2026 PIPER MEDIA. Minden jog fenntartva.</p>
   </footer>
@@ -88,7 +123,7 @@
     </div>
   </div>
 
-  <!-- JavaScript modulok behívása -->
+  <!-- JavaScript modulok -->
   <script src="js/lightbox.js?v=1.0"></script>
   <script src="js/video-cards.js?v=1.0"></script>
 </body>
