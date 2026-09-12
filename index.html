@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-  <!-- Moduláris fő CSS fájl behívása (ami behívja a css/ mappában lévő modulokat) -->
+  <!-- Moduláris fő CSS fájl behívása -->
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -38,75 +38,31 @@
     </div>
   </section>
 
-<!-- VIDEÓGYÁRTÁS SZEKCIÓ (Kisméretű kártyákkal) -->
-<section id="videogyartas">
-  <div class="section-header">
-    <h2 class="section-title">Videógyártás & Kameramunka</h2>
-    <p class="section-desc">Helyszíni videófelvételek és rendezvények professzionális rögzítése.</p>
-  </div>
+  <!-- 1. SZEKCIÓ: ZENESZERZÉS (Music Cosmos) -->
+  <section id="zeneszerzes">
+    <div class="section-header">
+      <h2 class="section-title">Filmzeneszerzés & Hangszerelés</h2>
+      <p class="section-desc">Eredeti zenekari filmzenék, akció- és drámai témák kifejezetten az adott mozgóképhez szabva.</p>
+    </div>
 
-  <div class="portfolio-grid">
-    <!-- 1. VIDEÓ KÁRTYA -->
-    <div class="video-card" data-video-id="bHW7389uW0Y" data-title="Promóciós Videó / Imázsfilm">
-      <div class="thumbnail-wrapper">
-        <img src="https://img.youtube.com/vi/bHW7389uW0Y/hqdefault.jpg" alt="Imázsfilm borítókép">
-        <div class="play-btn">
-          <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#000" d="M8 5v14l11-7z"/></svg>
+    <div class="portfolio-grid">
+      <div class="video-card" data-video-id="bHW7389uW0Y" data-title="WHO SHOULD DECIDE — Music Cosmos 7. Helyezés">
+        <div class="thumbnail-wrapper">
+          <img src="https://img.youtube.com/vi/bHW7389uW0Y/hqdefault.jpg" alt="Music Cosmos borítókép">
+          <div class="play-btn">
+            <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#000" d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">Promóciós Videó / Imázsfilm</h3>
-        <p class="card-text">Helyszíni forgatás, koncepció és precíz kameramunka.</p>
-      </div>
-    </div>
-
-    <!-- 2. VIDEÓ KÁRTYA -->
-    <div class="video-card" data-video-id="bHW7389uW0Y" data-title="Rendezvény összefoglaló">
-      <div class="thumbnail-wrapper">
-        <img src="https://img.youtube.com/vi/bHW7389uW0Y/hqdefault.jpg" alt="Rendezvény borítókép">
-        <div class="play-btn">
-          <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#000" d="M8 5v14l11-7z"/></svg>
+        <div class="card-body">
+          <div class="award-tag" style="margin-bottom: 0.5rem; color: var(--accent-cyan); font-weight: bold; font-size: 0.85rem;">🏆 Top 1% — 7. Helyezett</div>
+          <h3 class="card-title">WHO SHOULD DECIDE</h3>
+          <p class="card-text">Több mint 500 nemzetközi zeneszerző közül elért 7. helyezett versenymunka. Akció és drámai zenekari hangszerelés.</p>
         </div>
-      </div>
-      <div class="card-body">
-        <h3 class="card-title">Rendezvény összefoglaló</h3>
-        <p class="card-text">Hangulatos összefoglaló film rendezvényekről és eseményekről.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==========================================
-     FELUGRÓ MOZI MODAL (LIGHTBOX)
-     ========================================== -->
-<div id="videoModal" class="video-modal">
-  <div class="modal-backdrop"></div>
-  <div class="modal-content">
-    <button class="modal-close" aria-label="Bezárás">&times;</button>
-    <div class="player-header">
-      <div class="window-dots">
-        <span class="dot red"></span>
-        <span class="dot yellow"></span>
-        <span class="dot green"></span>
-      </div>
-      <div id="modalTitle" class="player-title">PIPER MEDIA CINEMATIC PLAYER</div>
-      <div class="player-status"><span class="live-indicator"></span> 4K HDR</div>
-    </div>
-    <div class="responsive-iframe cinematic-glow">
-      <iframe id="modalIframe" src="" title="Video Player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
-
-      <div class="player-footer">
-        <div class="award-tag">🏆 Top 1% — 7. Helyezett</div>
-        <h3>WHO SHOULD DECIDE (Music Cosmos International Scoring Competition)</h3>
-        <p>Több mint 500 nemzetközi zeneszerző közül elért 7. helyezett versenymunka. Akció és drámai zenekari hangszerelés, dinamikus szekcióváltásokkal.</p>
       </div>
     </div>
 
     <!-- POND5 STOCK KATALÓGUS LINK BANNER -->
-    <div id="stock-zene" class="pond5-banner">
+    <div id="stock-zene" class="pond5-banner" style="margin-top: 3rem;">
       <div class="pond5-content">
         <h4>Licencelhető Stock Zenék & Témák</h4>
         <p>Azonnal használható zenei sávok, háttérzenék és effektek az online katalógusban.</p>
@@ -117,7 +73,7 @@
     </div>
   </section>
 
-  <!-- 2. SEKTION: VIDEÓGYÁRTÁS (Forgatás & Kameramunka) -->
+  <!-- 2. SZEKCIÓ: VIDEÓGYÁRTÁS (Kameramunka) -->
   <section id="videogyartas">
     <div class="section-header">
       <h2 class="section-title">Videógyártás & Kameramunka</h2>
@@ -125,14 +81,13 @@
     </div>
 
     <div class="portfolio-grid">
-      <div class="card">
-        <div class="responsive-iframe">
-          <iframe 
-            src="https://www.youtube.com/embed/bHW7389uW0Y?controls=0&rel=0&modestbranding=1" 
-            title="Imázsfilm Forgatás" 
-            allowfullscreen 
-            loading="lazy">
-          </iframe>
+      <!-- 1. VIDEÓ KÁRTYA -->
+      <div class="video-card" data-video-id="bHW7389uW0Y" data-title="Promóciós Videó / Imázsfilm">
+        <div class="thumbnail-wrapper">
+          <img src="https://img.youtube.com/vi/bHW7389uW0Y/hqdefault.jpg" alt="Imázsfilm borítókép">
+          <div class="play-btn">
+            <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#000" d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
         <div class="card-body">
           <h3 class="card-title">Promóciós Videó / Imázsfilm</h3>
@@ -140,14 +95,13 @@
         </div>
       </div>
 
-      <div class="card">
-        <div class="responsive-iframe">
-          <iframe 
-            src="https://www.youtube.com/embed/bHW7389uW0Y?controls=0&rel=0&modestbranding=1" 
-            title="Rendezvényvideó" 
-            allowfullscreen 
-            loading="lazy">
-          </iframe>
+      <!-- 2. VIDEÓ KÁRTYA -->
+      <div class="video-card" data-video-id="bHW7389uW0Y" data-title="Rendezvény összefoglaló">
+        <div class="thumbnail-wrapper">
+          <img src="https://img.youtube.com/vi/bHW7389uW0Y/hqdefault.jpg" alt="Rendezvény borítókép">
+          <div class="play-btn">
+            <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#000" d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
         <div class="card-body">
           <h3 class="card-title">Rendezvény összefoglaló</h3>
@@ -157,7 +111,7 @@
     </div>
   </section>
 
-  <!-- 3. SEKTION: VIDEÓVÁGÁS & UTÓMUNKA -->
+  <!-- 3. SZEKCIÓ: VIDEÓVÁGÁS & UTÓMUNKA -->
   <section id="videovagas">
     <div class="section-header">
       <h2 class="section-title">Videóvágás & Post-Production</h2>
@@ -165,14 +119,12 @@
     </div>
 
     <div class="portfolio-grid">
-      <div class="card">
-        <div class="responsive-iframe">
-          <iframe 
-            src="https://www.youtube.com/embed/bHW7389uW0Y?controls=0&rel=0&modestbranding=1" 
-            title="Vágás és Színkorrekció" 
-            allowfullscreen 
-            loading="lazy">
-          </iframe>
+      <div class="video-card" data-video-id="bHW7389uW0Y" data-title="Cinematic Color Grading & Utómunka">
+        <div class="thumbnail-wrapper">
+          <img src="https://img.youtube.com/vi/bHW7389uW0Y/hqdefault.jpg" alt="Color Grading borítókép">
+          <div class="play-btn">
+            <svg viewBox="0 0 24 24" width="32" height="32"><path fill="#000" d="M8 5v14l11-7z"/></svg>
+          </div>
         </div>
         <div class="card-body">
           <h3 class="card-title">Cinematic Color Grading & Utómunka</h3>
@@ -189,6 +141,28 @@
     <a href="mailto:info@pipermedia.hu" class="btn" style="margin-bottom: 3rem;">info@pipermedia.hu</a>
     <p>&copy; 2026 Piper Media. Minden jog fenntartva.</p>
   </footer>
+
+  <!-- ==========================================
+       FELUGRÓ MOZI MODAL (LIGHTBOX)
+       ========================================== -->
+  <div id="videoModal" class="video-modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Bezárás">&times;</button>
+      <div class="player-header">
+        <div class="window-dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div id="modalTitle" class="player-title">PIPER MEDIA CINEMATIC PLAYER</div>
+        <div class="player-status"><span class="live-indicator"></span> 4K HDR</div>
+      </div>
+      <div class="responsive-iframe cinematic-glow">
+        <iframe id="modalIframe" src="" title="Video Player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
 
   <!-- Külső JavaScript fájl behívása -->
   <script src="script.js"></script>
