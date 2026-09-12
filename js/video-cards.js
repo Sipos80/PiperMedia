@@ -1,19 +1,17 @@
 /* ==========================================
-   VIDEÓ KÁRTYÁK ESEMÉNYKEZELŐI
+   PIPER MEDIA - VIDEO CARDS HANDLER
    ========================================== */
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Megkeressük az összes videókártyát
-  const cards = document.querySelectorAll(".video-card");
+document.addEventListener('DOMContentLoaded', () => {
+  const videoCards = document.querySelectorAll('.video-card');
 
-  cards.forEach((card) => {
-    card.addEventListener("click", function () {
-      // Kiolvassuk a kártyához rendelt videó URL-t és címet a data-attribútumokból
-      const videoUrl = this.getAttribute("data-video-url");
-      const videoTitle = this.getAttribute("data-title") || "VIDEÓ LEJÁTSZÓ";
+  videoCards.forEach((card) => {
+    card.addEventListener('click', () => {
+      const videoId = card.getAttribute('data-video-id');
+      const videoTitle = card.getAttribute('data-title') || 'PIPER MEDIA CINEMATIC PLAYER';
 
-      if (videoUrl) {
-        openVideoModal(videoUrl, videoTitle);
+      if (videoId && typeof Lightbox !== 'undefined') {
+        Lightbox.open(videoId, videoTitle);
       }
     });
   });
