@@ -1,4 +1,16 @@
 /* ==========================================
+   RESET & BASE FIXES
+   ========================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==========================================
    LAYOUT & STRUCTURE
    ========================================== */
 
@@ -51,11 +63,11 @@ header {
 
 /* --- Hero Section --- */
 .hero {
-  min-height: 60vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8rem 2rem 3rem;
+  padding: 8rem 2rem 4rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -63,18 +75,22 @@ header {
 .hero-container {
   display: flex;
   align-items: center;
-  gap: 2.5rem; /* Kisebb hézag a kép és a szöveg között */
+  gap: 3rem;
   width: 100%;
 }
 
+/* Képkeret: fix méret, gradiens szegély és belső overflow védelem */
 .hero-image-wrapper {
-  flex-shrink: 0;
-  width: 190px;  /* Kisebb, letisztultabb átmérő */
-  height: 190px;
+  flex: 0 0 180px;         /* Garantálja a pontosan 180px szélességet flexboxban */
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  padding: 2px;  /* Vékonyabb gradiens szegély */
+  padding: 3px;            /* Ez adja a neon keret vastagságát */
   background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-profile-img {
@@ -86,53 +102,28 @@ header {
 }
 
 .hero-content {
-  max-width: 750px;
+  max-width: 700px;
   text-align: left;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -1px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   background: linear-gradient(180deg, #ffffff 0%, var(--text-muted) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--text-muted);
   line-height: 1.6;
   margin-bottom: 0;
 }
 
-/* --- Reszponzivitás mobilon --- */
-@media (max-width: 868px) {
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
-  }
-
-  .hero-content {
-    text-align: center;
-  }
-
-  .hero-image-wrapper {
-    width: 150px; /* Mobilon még kompaktabb */
-    height: 150px;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .nav-links {
-    display: none;
-  }
-}
 /* --- Sections Common --- */
 section {
   padding: 5rem 2rem;
@@ -180,8 +171,9 @@ footer {
   }
 
   .hero-image-wrapper {
-    width: 200px;
-    height: 200px;
+    flex: 0 0 150px;
+    width: 150px;
+    height: 150px;
   }
 
   .hero h1 {
