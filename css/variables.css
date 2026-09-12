@@ -1,74 +1,33 @@
 /* ==========================================
-   FULL SCREEN LIGHTBOX MODAL
+   GLOBAL VARIABLES & RESET
    ========================================== */
 
-.video-modal {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100vw !important;
-  height: 100vh !important;
-  z-index: 999999 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  transition: opacity 0.3s ease, visibility 0.3s ease !important;
-  background: #000 !important;
+:root {
+  --bg-dark: #090a0f;
+  --bg-card: #12151e;
+  --accent-cyan: #00f2fe;
+  --accent-purple: #4facfe;
+  --accent-pink: #f72585;
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --glass: rgba(18, 21, 30, 0.75);
 }
 
-.video-modal.active {
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Sötétített háttér */
-.modal-backdrop {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  background: #000 !important;
-  cursor: pointer;
-}
-
-/* Teljes képernyős konténer (Full Screen) */
-.modal-content {
-  position: relative !important;
-  width: 100vw !important;
-  height: 100vh !important;
-  max-width: none !important;
-  background: #000 !important;
-  border: none !important;
-  border-radius: 0 !important;
-  overflow: hidden !important;
-  z-index: 2 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-/* 16:9 képarányú videó iframe kitöltése teljes képernyőn */
-.responsive-iframe {
-  position: relative !important;
-  width: 100% !important;
-  height: 100% !important;
-  padding-bottom: 0 !important;
-  background: #000 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.responsive-iframe iframe {
-  width: 100% !important;
-  height: 100% !important;
-  max-width: 100% !important;
-  max-height: 100% !important;
-  border: 0 !important;
-  object-fit: contain !important;
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(0, 242, 254, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 85% 60%, rgba(247, 37, 133, 0.04) 0%, transparent 40%);
+  background-attachment: fixed;
 }
