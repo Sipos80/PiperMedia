@@ -4,18 +4,26 @@
 
 // 1. VIDEÓK LISTÁJA
 const videos = [
-  {
+
+   {
+      id: "SLnCjCTzyK0",
+      title: "WHO SHOULD DECIDE — Music Cosmos",
+      description: "Döntős helyezés az Amazon Frontlines zeneszerző versenyén.",
+      poster: "https://img.youtube.com/vi/SLnCjCTzyK0/hqdefault.jpg"
+   },
+   {
+    id: "-GozvYoGRDY",
+    title: "Piper Music - Trailer",
+    description: "Videó vágás, zeneszerzés, AI narráció.",
+    poster: "https://img.youtube.com/vi/-GozvYoGRDY/hqdefault.jpg"
+   },
+   {
     id: "bHW7389uW0Y",
     title: "Bridgerton",
     description: "Egyedi zeneszerzés filmekhez.",
     poster: "https://img.youtube.com/vi/bHW7389uW0Y/hqdefault.jpg"
   },
-     {
-    id: "SLnCjCTzyK0",
-    title: "WHO SHOULD DECIDE — Music Cosmos",
-    description: "Döntős helyezés az Amazon Frontlines zeneszerző versenyén.",
-    poster: "https://img.youtube.com/vi/SLnCjCTzyK0/hqdefault.jpg"
-  },
+   
    {
     id: "qLRmNFddtgA",
     title: "Stargirl",
@@ -29,13 +37,15 @@ const videos = [
     description: "Egyedi zeneszerzés filmekhez.",
     poster: "https://img.youtube.com/vi/EnJzh_8LiT0/hqdefault.jpg"
    },
+
+   {
+    id: "ayCn3sQRKRs",
+    title: "Tellurian",
+    description: "Egyedi zeneszerzés filmekhez.",
+    poster: "https://img.youtube.com/vi/ayCn3sQRKRs/hqdefault.jpg"
+   }
    
-  {
-    id: "-GozvYoGRDY",
-    title: "Piper Music - Trailer",
-    description: "Videó vágás, zeneszerzés, AI narráció.",
-    poster: "https://img.youtube.com/vi/-GozvYoGRDY/hqdefault.jpg"
-  }
+
 ];
 
 // 2. KÁRTYÁK KIRAKÁSA AZ OLDAL BETÖLTÉSEKOR
