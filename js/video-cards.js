@@ -26,7 +26,7 @@ const videos = [
    {
     id: "EnJzh_8LiT0",
     title: "Sprite Fright",
-    description: "Zeneszerzés filmekhez.",
+    description: "Egyedi zeneszerzés filmekhez.",
     poster: "https://img.youtube.com/vi/EnJzh_8LiT0/hqdefault.jpg"
    },
    
