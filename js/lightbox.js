@@ -1,71 +1,71 @@
 /* ==========================================
-   FELUGRÓ MOZI MODAL (LIGHTBOX) LOGIKA
+   PIPER MEDIA - LIGHTBOX MODAL LOGIC
    ========================================== */
 
-// 1. Biztosítjuk, hogy a modal a <body> közvetlen gyermeke legyen (nem szorul be konténerbe)
+// Garantáljuk, hogy a modal a body közvetlen gyermeke legyen
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("videoModal");
-  if (modal) {
+  if (modal && modal.parentElement !== document.body) {
     document.body.appendChild(modal);
   }
 });
 
-/**
- * Videó megnyitása a felugró moziablakban
- * @param {string} videoUrl - A videó / YouTube iframe beágyazó URL-je
- * @param {string} title - A videó címe (opcionális)
- */
-function openVideoModal(videoUrl, title = "VIDEÓ LEJÁTSZÓ") {
-  const modal = document.getElementById("videoModal");
-  const iframe = document.getElementById("modalIframe");
-  const titleEl = modal ? modal.querySelector(".player-title") : null;
+const Lightbox = (() => {
+  const getElements = () => ({
+    modal: document.getElementById('videoModal'),
+    modalIframe: document.getElementById('modalIframe'),
+    modalTitle: document.getElementById('modalTitle'),
+    closeBtn: document.querySelector('.modal-close'),
+    backdrop: document.querySelector('.modal-backdrop')
+  });
 
-  if (modal && iframe) {
-    // URL beállítása (autostart opcióval, ha YouTube)
-    let autoPlayUrl = videoUrl;
-    if (videoUrl.includes("youtube.com") || videoUrl.includes("youtu.be")) {
-      autoPlayUrl += (videoUrl.includes("?") ? "&" : "?") + "autoplay=1";
+  /**
+   * Megnyitja a modalt a megadott YouTube videó ID-val és címmel.
+   * @param {string} videoId - YouTube videó azonosítója
+   * @param {string} title - Megjelenítendő cím
+   */
+  const open = (videoId, title) => {
+    const { modal, modalIframe, modalTitle } = getElements();
+    if (!modal || !modalIframe) return;
+
+    modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+
+    if (modalTitle && title) {
+      modalTitle.textContent = title;
     }
 
-    iframe.src = autoPlayUrl;
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  };
 
-    if (titleEl) {
-      titleEl.textContent = title;
-    }
+  /**
+   * Bezárja a modalt és leállítja a videó lejátszását.
+   */
+  const close = () => {
+    const { modal, modalIframe } = getElements();
+    if (!modal || !modalIframe) return;
 
-    modal.classList.add("active");
-    document.body.style.overflow = "hidden"; // Háttér görgetésének tiltása
-  }
-}
+    modal.classList.remove('active');
+    modalIframe.src = '';
+    document.body.style.overflow = '';
+  };
 
-/**
- * Moziablak bezárása és a videó leállítása
- */
-function closeVideoModal() {
-  const modal = document.getElementById("videoModal");
-  const iframe = document.getElementById("modalIframe");
+  const init = () => {
+    document.addEventListener('click', (e) => {
+      if (e.target.matches('.modal-close') || e.target.matches('.modal-backdrop')) {
+        close();
+      }
+    });
 
-  if (modal) {
-    modal.classList.remove("active");
-    document.body.style.overflow = ""; // Görgetés visszaállítása
-  }
+    document.addEventListener('keydown', (e) => {
+      const { modal } = getElements();
+      if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
+        close();
+      }
+    });
+  };
 
-  if (iframe) {
-    // Az iframe kiürítése azonnal leállítja a lejátszott hangot/videót
-    iframe.src = "";
-  }
-}
+  init();
 
-// Egérkattintás a sötétített háttérre (backdrop) -> bezárás
-document.addEventListener("click", function (event) {
-  if (event.target.classList.contains("modal-backdrop")) {
-    closeVideoModal();
-  }
-});
-
-// ESC billentyű megnyomására bezárás
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    closeVideoModal();
-  }
-});
+  return { open, close };
+})();
