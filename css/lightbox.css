@@ -8,7 +8,7 @@
   left: 0 !important;
   width: 100vw !important;
   height: 100vh !important;
-  z-index: 999999 !important; /* Minden elem felett jelenik meg */
+  z-index: 999999 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -18,14 +18,13 @@
   transition: opacity 0.3s ease, visibility 0.3s ease !important;
 }
 
-/* Amikor a JavaScript aktiválja (kattintáskor) */
 .video-modal.active {
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
 }
 
-/* Sötétített, elmosott háttér */
+/* Sötétített háttér */
 .modal-backdrop {
   position: absolute !important;
   top: 0 !important;
@@ -36,11 +35,11 @@
   backdrop-filter: blur(12px) !important;
 }
 
-/* A nagy mozivászon konténere */
+/* Mozivászon konténer */
 .modal-content {
   position: relative !important;
   width: 90% !important;
-  max-width: 1000px !important; /* Nagy, kényelmes mozis méret */
+  max-width: 1000px !important;
   background: #0d0f17 !important;
   border: 1px solid rgba(0, 242, 254, 0.3) !important;
   border-radius: 16px !important;
@@ -55,32 +54,12 @@
   transform: scale(1);
 }
 
-/* Bezáró gomb (X) */
-.modal-close {
-  position: absolute !important;
-  top: 10px !important;
-  right: 18px !important;
-  background: transparent !important;
-  border: none !important;
-  color: #fff !important;
-  font-size: 32px !important;
-  cursor: pointer !important;
-  z-index: 10 !important;
-  line-height: 1 !important;
-  transition: color 0.2s ease;
-}
-
-.modal-close:hover {
-  color: #00f2fe !important;
-}
-
-/* Lejátszó felső sávja */
+/* LEJÁTSZÓ FEJLÉCE (Flexbox sorba rendezve) */
 .player-header {
   display: flex !important;
   align-items: center !important;
-  justify-content: flex-start !important; /* Balra igazítás */
-  gap: 20px !important; /* Térköz az elemek között */
-  padding: 14px 60px 14px 20px !important; /* Jobb oldalon hely hagyása az X gombnak */
+  gap: 15px !important;
+  padding: 12px 20px !important;
   background: #141722 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
@@ -102,6 +81,7 @@
 .dot.yellow { background: #ffbd2e; }
 .dot.green { background: #27c93f; }
 
+/* Videó címe */
 .player-title {
   color: #fff !important;
   font-size: 0.9rem !important;
@@ -112,27 +92,50 @@
   text-overflow: ellipsis;
 }
 
-/* 4K HDR kijelző eltolva balra a cím után */
+/* 4K HDR felirat - közvetlenül a cím után, balra igazítva */
 .player-status {
   color: #00f2fe;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-left: auto; /* Elválasztja a címtől, de az X gomb előtt áll meg */
-  padding-right: 10px;
+  background: rgba(0, 242, 254, 0.1);
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  flex-shrink: 0;
 }
 
 .live-indicator {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background: #00f2fe;
   border-radius: 50%;
-  box-shadow: 0 0 8px #00f2fe;
+  box-shadow: 0 0 6px #00f2fe;
 }
 
-/* Beágyazott 16:9 méretű videó iframe */
+/* Bezáró gomb (X) - Most a flexbox tolja ki a jobb szélre (margin-left: auto) */
+.modal-close {
+  margin-left: auto !important;
+  position: static !important;
+  background: transparent !important;
+  border: none !important;
+  color: #aaa !important;
+  font-size: 28px !important;
+  cursor: pointer !important;
+  line-height: 1 !important;
+  padding: 0 5px !important;
+  transition: color 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+.modal-close:hover {
+  color: #00f2fe !important;
+  transform: scale(1.1);
+}
+
+/* 16:9 videó iframe */
 .responsive-iframe {
   position: relative !important;
   width: 100% !important;
