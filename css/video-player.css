@@ -1,108 +1,125 @@
-/* ==========================================
-   PROFI CINEMATIC VIDEO PLAYER MODULE
-   ========================================== */
-
-.player-wrapper {
+/* --- VIDEÓ KÁRTYÁK THUMBNAIL-LEL --- */
+.video-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
-  max-width: 980px;
-  margin: 0 auto 3rem auto;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 
-              0 0 40px rgba(0, 242, 254, 0.08);
-  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.player-wrapper:hover {
-  border-color: rgba(0, 242, 254, 0.3);
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.8), 
-              0 0 50px rgba(0, 242, 254, 0.15);
+.video-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 242, 254, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 242, 254, 0.15);
 }
 
-/* --- Studio Bar (Felső ablak keret) --- */
-.player-header {
-  background: rgba(15, 18, 26, 0.95);
-  padding: 0.8rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--border-color);
-}
-
-.window-dots {
-  display: flex;
-  gap: 8px;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-
-.dot.red { background: #ff5f56; }
-.dot.yellow { background: #ffbd2e; }
-.dot.green { background: #27c93f; }
-
-.player-title {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--text-muted);
-  text-transform: uppercase;
-}
-
-.player-status {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--accent-cyan);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.live-indicator {
-  width: 7px;
-  height: 7px;
-  background-color: var(--accent-cyan);
-  border-radius: 50%;
-  box-shadow: 0 0 8px var(--accent-cyan);
-}
-
-/* --- Responsive 16:9 Iframe Container --- */
-.responsive-iframe {
+.thumbnail-wrapper {
   position: relative;
+  width: 100%;
   padding-bottom: 56.25%; /* 16:9 arány */
-  height: 0;
   overflow: hidden;
   background: #000;
 }
 
-.responsive-iframe iframe {
+.thumbnail-wrapper img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: 0;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-/* --- Alsó információs blokk --- */
-.player-footer {
-  padding: 2rem 2.5rem;
-  background: linear-gradient(180deg, rgba(18, 21, 30, 0.6) 0%, rgba(9, 10, 15, 0.9) 100%);
+.video-card:hover .thumbnail-wrapper img {
+  transform: scale(1.05);
 }
 
-.player-footer h3 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-bottom: 0.6rem;
-  letter-spacing: -0.5px;
+/* Lejátszás gomb ikon a kártyán */
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 60px;
+  height: 60px;
+  background: var(--accent-cyan);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.player-footer p {
-  color: var(--text-muted);
-  font-size: 0.98rem;
-  line-height: 1.6;
+.video-card:hover .play-btn {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: #ffffff;
+}
+
+/* --- FELUGRÓ MODAL (LIGHTBOX) --- */
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.video-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(4, 5, 8, 0.85);
+  backdrop-filter: blur(10px);
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 50px rgba(0, 242, 254, 0.2);
+  z-index: 1;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.video-modal.active .modal-content {
+  transform: scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: var(--accent-cyan);
 }
