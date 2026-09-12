@@ -46,9 +46,23 @@ const videos = [
    },
 
    {
+    id: "wHK4ej0ZOQA",
+    title: "The Orchestra Contest",
+    description: "Egyedi zeneszerzés trailerhez.",
+    poster: "https://img.youtube.com/vi/wHK4ej0ZOQA/hqdefault.jpg"
+   },
+
+   {
+    id: "DeFkxaiwTEU",
+    title: "Sonuscore - Composer Of The Year Award 2023",
+    description: "Egyedi zeneszerzés trailerhez.",
+    poster: "https://img.youtube.com/vi/DeFkxaiwTEU/hqdefault.jpg"
+   },
+
+   {
     id: "ayCn3sQRKRs",
     title: "Tellurian",
-    description: "Egyedi zeneszerzés filmekhez.",
+    description: "Egyedi zeneszerzés trailerhez.",
     poster: "https://img.youtube.com/vi/ayCn3sQRKRs/hqdefault.jpg"
    }
    
