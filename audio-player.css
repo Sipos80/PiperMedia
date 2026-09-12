@@ -1,0 +1,28 @@
+/* ==========================================
+   AUDIO PLAYER & STOCK MUSIC MODULES
+   ========================================== */
+
+.pond5-banner {
+  background: linear-gradient(135deg, rgba(18, 21, 30, 0.8) 0%, rgba(0, 242, 254, 0.05) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 1.8rem 2.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.pond5-content h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.pond5-content p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
