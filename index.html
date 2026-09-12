@@ -10,10 +10,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-  <!-- Stíluslapok behívása -->
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="css/video-cards.css">
-  <link rel="stylesheet" href="css/lightbox.css">
+  <!-- Stíluslapok behívása (verziószámmal a gyorsítótár frissítéséhez) -->
+  <link rel="stylesheet" href="main.css?v=1.0">
+  <link rel="stylesheet" href="css/video-cards.css?v=1.0">
+  <link rel="stylesheet" href="css/lightbox.css?v=1.0">
 </head>
 <body>
 
@@ -35,7 +35,7 @@
   </main>
 
   <!-- FULLSCREEN LIGHTBOX MODAL -->
-  <div id="videoModal" class="video-modal">
+  <div id="videoModal" class="video-modal" role="dialog" aria-modal="true" aria-label="Videó lejátszó">
     <div class="modal-backdrop"></div>
     <div class="modal-content">
       <div class="responsive-iframe">
@@ -45,7 +45,7 @@
   </div>
 
   <!-- JavaScript modulok behívása -->
-  <script src="js/lightbox.js"></script>
-  <script src="js/video-cards.js"></script>
+  <script src="js/lightbox.js?v=1.0"></script>
+  <script src="js/video-cards.js?v=1.0"></script>
 </body>
 </html>
