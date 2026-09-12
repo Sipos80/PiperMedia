@@ -1,125 +1,101 @@
-/* --- VIDEÓ KÁRTYÁK THUMBNAIL-LEL --- */
-.video-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
+/* ==========================================
+   FELUGRÓ MODAL (LIGHTBOX) KERET ÉS MŰKÖDÉS
+   ========================================== */
 
-.video-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(0, 242, 254, 0.4);
-  box-shadow: 0 10px 30px rgba(0, 242, 254, 0.15);
-}
-
-.thumbnail-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 arány */
-  overflow: hidden;
-  background: #000;
-}
-
-.thumbnail-wrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.video-card:hover .thumbnail-wrapper img {
-  transform: scale(1.05);
-}
-
-/* Lejátszás gomb ikon a kártyán */
-.play-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
-  width: 60px;
-  height: 60px;
-  background: var(--accent-cyan);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.video-card:hover .play-btn {
-  transform: translate(-50%, -50%) scale(1.1);
-  background: #ffffff;
-}
-
-/* --- FELUGRÓ MODAL (LIGHTBOX) --- */
+/* Alaphelyzetben rejtett modal */
 .video-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 99999 !important; /* Biztosan minden felett legyen */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease !important;
 }
 
+/* Amikor a JS hozzáadja az active osztályt */
 .video-modal.active {
-  opacity: 1;
-  pointer-events: auto;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
+/* Sötét háttér maszk */
 .modal-backdrop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(4, 5, 8, 0.85);
-  backdrop-filter: blur(10px);
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(8px) !important;
 }
 
+/* A felugró ablak konténere */
 .modal-content {
-  position: relative;
-  width: 90%;
-  max-width: 1000px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 50px rgba(0, 242, 254, 0.2);
-  z-index: 1;
-  transform: scale(0.95);
-  transition: transform 0.3s ease;
+  position: relative !important;
+  width: 90% !important;
+  max-width: 900px !important;
+  background: #111 !important;
+  border: 1px solid rgba(0, 242, 254, 0.3) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  z-index: 2 !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 242, 254, 0.2) !important;
 }
 
-.video-modal.active .modal-content {
-  transform: scale(1);
-}
-
+/* Bezáró gomb (X) */
 .modal-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 10;
-  transition: color 0.2s ease;
+  position: absolute !important;
+  top: 10px !important;
+  right: 15px !important;
+  background: transparent !important;
+  border: none !important;
+  color: #fff !important;
+  font-size: 28px !important;
+  cursor: pointer !important;
+  z-index: 10 !important;
+  line-height: 1 !important;
 }
 
 .modal-close:hover {
-  color: var(--accent-cyan);
+  color: #00f2fe !important;
+}
+
+/* Lejátszó Fejléc */
+.player-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 12px 20px !important;
+  background: #181818 !important;
+  border-bottom: 1px solid #282828 !important;
+}
+
+.player-title {
+  color: #fff !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+}
+
+/* IFRAME KONTÉNER (16:9 arány beállítása) */
+.responsive-iframe {
+  position: relative !important;
+  width: 100% !important;
+  padding-bottom: 56.25% !important; /* Ez adja meg a 16:9 magasságot! */
+  height: 0 !important;
+  background: #000 !important;
+}
+
+.responsive-iframe iframe {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
 }
