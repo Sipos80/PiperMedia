@@ -18,6 +18,13 @@ const videos = [
     poster: "https://img.youtube.com/vi/-GozvYoGRDY/hqdefault.jpg"
    },
    {
+    id: "a358Gy9Pg1c",
+    title: "Végtelen álom",
+    description: "Dalszerzés, végtelen zoom videó Davinci Resolve segítségével.",
+    poster: "https://img.youtube.com/vi/a358Gy9Pg1c/hqdefault.jpg"
+   },
+   
+   {
     id: "bHW7389uW0Y",
     title: "Bridgerton",
     description: "Egyedi zeneszerzés filmekhez.",
