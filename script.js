@@ -1,68 +1,101 @@
-document.addEventListener('DOMContentLoaded', () => {
+/* ==========================================
+   FELUGRÓ MODAL (LIGHTBOX) KERET ÉS MŰKÖDÉS
+   ========================================== */
 
-  /* ==========================================
-     1. FELUGRÓ MOZI MODAL (LIGHTBOX) KEZELÉSE
-     ========================================== */
-  const modal = document.getElementById('videoModal');
-  const modalIframe = document.getElementById('modalIframe');
-  const modalTitle = document.getElementById('modalTitle');
-  const closeBtn = document.querySelector('.modal-close');
-  const backdrop = document.querySelector('.modal-backdrop');
-  const videoCards = document.querySelectorAll('.video-card');
+/* Alaphelyzetben rejtett modal */
+.video-modal {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 99999 !important; /* Biztosan minden felett legyen */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.3s ease !important;
+}
 
-  // Videó megnyitása kattintásra
-  videoCards.forEach(card => {
-    card.addEventListener('click', () => {
-      const videoId = card.getAttribute('data-video-id');
-      const title = card.getAttribute('data-title');
+/* Amikor a JS hozzáadja az active osztályt */
+.video-modal.active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
 
-      if (videoId && modal && modalIframe) {
-        modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&rel=0&modestbranding=1`;
-        if (title && modalTitle) {
-          modalTitle.textContent = title;
-        }
-        modal.classList.add('active');
-      }
-    });
-  });
+/* Sötét háttér maszk */
+.modal-backdrop {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(8px) !important;
+}
 
-  // Modal bezárása és a videó leállítása
-  function closeModal() {
-    if (modal && modalIframe) {
-      modal.classList.remove('active');
-      modalIframe.src = '';
-    }
-  }
+/* A felugró ablak konténere */
+.modal-content {
+  position: relative !important;
+  width: 90% !important;
+  max-width: 900px !important;
+  background: #111 !important;
+  border: 1px solid rgba(0, 242, 254, 0.3) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  z-index: 2 !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 242, 254, 0.2) !important;
+}
 
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  if (backdrop) backdrop.addEventListener('click', closeModal);
+/* Bezáró gomb (X) */
+.modal-close {
+  position: absolute !important;
+  top: 10px !important;
+  right: 15px !important;
+  background: transparent !important;
+  border: none !important;
+  color: #fff !important;
+  font-size: 28px !important;
+  cursor: pointer !important;
+  z-index: 10 !important;
+  line-height: 1 !important;
+}
 
-  // ESC billentyűre bezárás
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
-      closeModal();
-    }
-  });
+.modal-close:hover {
+  color: #00f2fe !important;
+}
 
+/* Lejátszó Fejléc */
+.player-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 12px 20px !important;
+  background: #181818 !important;
+  border-bottom: 1px solid #282828 !important;
+}
 
-  /* ==========================================
-     2. FINOM GÖRDÜLÉS (SMOOTH SCROLL) A MENÜHÖZ
-     ========================================== */
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      
-      // Üres vagy csak "#" hivatkozás kiszűrése
-      if (href === '#' || href === '') return;
+.player-title {
+  color: #fff !important;
+  font-size: 0.9rem !important;
+  font-weight: 600 !important;
+}
 
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
+/* IFRAME KONTÉNER (16:9 arány beállítása) */
+.responsive-iframe {
+  position: relative !important;
+  width: 100% !important;
+  padding-bottom: 56.25% !important; /* Ez adja meg a 16:9 magasságot! */
+  height: 0 !important;
+  background: #000 !important;
+}
 
-});
+.responsive-iframe iframe {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+}
