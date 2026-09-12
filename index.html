@@ -12,50 +12,46 @@
 
   <!-- Stíluslapok behívása -->
   <link rel="stylesheet" href="main.css?v=1.0">
+  <link rel="stylesheet" href="layout.css?v=1.0">
   <link rel="stylesheet" href="css/video-cards.css?v=1.0">
   <link rel="stylesheet" href="css/lightbox.css?v=1.0">
 </head>
 <body>
 
-  <!-- Fejléc -->
+  <!-- Fejléc (A layout.css osztályaival) -->
   <header>
     <div class="nav-container">
       <div class="logo">PIPER MEDIA</div>
     </div>
   </header>
 
-  <!-- Fő tartalom -->
-  <main class="container">
-
-    <!-- BEMUTATKOZÓ SZEKCIÓ (Hero) -->
-    <section class="intro-section">
-      <h1 class="hero-title">Egyedi filmzenék & vizuális tartalomgyártás</h1>
-      <p class="hero-text">
+  <!-- Hero / Bemutatkozó Szekció -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Egyedi filmzenék & vizuális tartalomgyártás</h1>
+      <p>
         Dramaturgiai fókuszú akusztikus és hibrid szimfonikus zeneszerzés filmekhez, 
         televíziós projektekhez és trailerekhez — a klasszikus hangszereléstől a modern sound designig.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <!-- DINAMIKUS VIDEÓ RÁCS -->
-    <section class="portfolio-section">
-      <h2 class="section-title">Referenciák</h2>
+  <!-- Portfólió Szekció -->
+  <main>
+    <section>
+      <div class="section-header">
+        <h2 class="section-title">Korábbi munkáim</h2>
+        <p class="section-desc">Válogatás filmzenékből, trailerekből és vizuális projektekből.</p>
+      </div>
+
+      <!-- DINAMIKUS VIDEÓ RÁCS -->
       <div id="videoGrid" class="video-grid"></div>
     </section>
-
   </main>
 
-  <!-- KAPCSOLAT & LÁBLÉC -->
-  <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="contact-info">
-        <h3>Projektkérdésed vagy ötleted van?</h3>
-        <p>Vedd fel velünk a kapcsolatot egyedi zeneszerzéssel vagy videógyártással kapcsolatban:</p>
-        <a href="mailto:info@pipermedia.hu" class="contact-email">info@pipermedia.hu</a>
-      </div>
-      <div class="copyright">
-        <p>&copy; 2026 PIPER MEDIA. Minden jog fenntartva.</p>
-      </div>
-    </div>
+  <!-- Lábléc (A layout.css osztályaival) -->
+  <footer>
+    <p>&copy; 2026 PIPER MEDIA. Minden jog fenntartva.</p>
   </footer>
 
   <!-- FULLSCREEN LIGHTBOX MODAL -->
