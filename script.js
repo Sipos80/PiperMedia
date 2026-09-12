@@ -1,101 +1,54 @@
-/* ==========================================
-   FELUGRÓ MODAL (LIGHTBOX) KERET ÉS MŰKÖDÉS
-   ========================================== */
+document.addEventListener('DOMContentLoaded', () => {
+  console.log("Script betöltve, inicializálás...");
 
-/* Alaphelyzetben rejtett modal */
-.video-modal {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100vw !important;
-  height: 100vh !important;
-  z-index: 99999 !important; /* Biztosan minden felett legyen */
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-  transition: opacity 0.3s ease !important;
-}
+  const modal = document.getElementById('videoModal');
+  const modalIframe = document.getElementById('modalIframe');
+  const modalTitle = document.getElementById('modalTitle');
+  const closeBtn = document.querySelector('.modal-close');
+  const backdrop = document.querySelector('.modal-backdrop');
+  const videoCards = document.querySelectorAll('.video-card');
 
-/* Amikor a JS hozzáadja az active osztályt */
-.video-modal.active {
-  opacity: 1 !important;
-  pointer-events: auto !important;
-}
+  if (!modal || !modalIframe) {
+    console.error("Hiba: A #videoModal vagy a #modalIframe nem található a HTML-ben!");
+    return;
+  }
 
-/* Sötét háttér maszk */
-.modal-backdrop {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  background: rgba(0, 0, 0, 0.85) !important;
-  backdrop-filter: blur(8px) !important;
-}
+  videoCards.forEach((card, index) => {
+    card.addEventListener('click', (e) => {
+      e.stopPropagation();
+      console.log(`Kártyára kattintva: ${index + 1}`);
 
-/* A felugró ablak konténere */
-.modal-content {
-  position: relative !important;
-  width: 90% !important;
-  max-width: 900px !important;
-  background: #111 !important;
-  border: 1px solid rgba(0, 242, 254, 0.3) !important;
-  border-radius: 12px !important;
-  overflow: hidden !important;
-  z-index: 2 !important;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 242, 254, 0.2) !important;
-}
+      const videoId = card.getAttribute('data-video-id');
+      const title = card.getAttribute('data-title');
 
-/* Bezáró gomb (X) */
-.modal-close {
-  position: absolute !important;
-  top: 10px !important;
-  right: 15px !important;
-  background: transparent !important;
-  border: none !important;
-  color: #fff !important;
-  font-size: 28px !important;
-  cursor: pointer !important;
-  z-index: 10 !important;
-  line-height: 1 !important;
-}
+      if (videoId) {
+        // YouTube embed URL automatikus lejátszással
+        modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
+        
+        if (title && modalTitle) {
+          modalTitle.textContent = title;
+        }
 
-.modal-close:hover {
-  color: #00f2fe !important;
-}
+        modal.classList.add('active');
+        console.log("Modal aktiválva!");
+      } else {
+        console.error("Hiba: Hiányzik a data-video-id attribútum a kártyáról!");
+      }
+    });
+  });
 
-/* Lejátszó Fejléc */
-.player-header {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  padding: 12px 20px !important;
-  background: #181818 !important;
-  border-bottom: 1px solid #282828 !important;
-}
+  function closeModal() {
+    console.log("Modal bezárása...");
+    modal.classList.remove('active');
+    modalIframe.src = '';
+  }
 
-.player-title {
-  color: #fff !important;
-  font-size: 0.9rem !important;
-  font-weight: 600 !important;
-}
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (backdrop) backdrop.addEventListener('click', closeModal);
 
-/* IFRAME KONTÉNER (16:9 arány beállítása) */
-.responsive-iframe {
-  position: relative !important;
-  width: 100% !important;
-  padding-bottom: 56.25% !important; /* Ez adja meg a 16:9 magasságot! */
-  height: 0 !important;
-  background: #000 !important;
-}
-
-.responsive-iframe iframe {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  border: 0 !important;
-}
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
+    }
+  });
+});
