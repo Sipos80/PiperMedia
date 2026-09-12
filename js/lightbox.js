@@ -28,7 +28,8 @@ const Lightbox = (() => {
     const { modal, modalIframe, modalTitle } = getElements();
     if (!modal || !modalIframe) return;
 
-    modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+    // Az URL kiegészítve a controls=0 paraméterrel a kezelőszervek elrejtéséhez
+    modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&rel=0&modestbranding=1`;
 
     if (modalTitle && title) {
       modalTitle.textContent = title;
