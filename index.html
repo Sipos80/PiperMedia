@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
 
-  <!-- Stíluslapok behívása (verziószámmal a gyorsítótár frissítéséhez) -->
+  <!-- Stíluslapok behívása -->
   <link rel="stylesheet" href="main.css?v=1.0">
   <link rel="stylesheet" href="css/video-cards.css?v=1.0">
   <link rel="stylesheet" href="css/lightbox.css?v=1.0">
@@ -26,13 +26,37 @@
 
   <!-- Fő tartalom -->
   <main class="container">
-    
-    <h1 class="section-title">Korábbi munkáim:</h1>
 
-    <!-- DINAMIKUS VIDEÓ RÁCS (A js/video-cards.js ide szúrja be a kártyákat) -->
-    <div id="videoGrid" class="video-grid"></div>
+    <!-- BEMUTATKOZÓ SZEKCIÓ (Hero) -->
+    <section class="intro-section">
+      <h1 class="hero-title">Egyedi filmzenék & vizuális tartalomgyártás</h1>
+      <p class="hero-text">
+        Dramaturgiai fókuszú akusztikus és hibrid szimfonikus zeneszerzés filmekhez, 
+        televíziós projektekhez és trailerekhez — a klasszikus hangszereléstől a modern sound designig.
+      </p>
+    </section>
+
+    <!-- DINAMIKUS VIDEÓ RÁCS -->
+    <section class="portfolio-section">
+      <h2 class="section-title">Referenciák</h2>
+      <div id="videoGrid" class="video-grid"></div>
+    </section>
 
   </main>
+
+  <!-- KAPCSOLAT & LÁBLÉC -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="contact-info">
+        <h3>Projektkérdésed vagy ötleted van?</h3>
+        <p>Vedd fel velünk a kapcsolatot egyedi zeneszerzéssel vagy videógyártással kapcsolatban:</p>
+        <a href="mailto:info@pipermedia.hu" class="contact-email">info@pipermedia.hu</a>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2026 PIPER MEDIA. Minden jog fenntartva.</p>
+      </div>
+    </div>
+  </footer>
 
   <!-- FULLSCREEN LIGHTBOX MODAL -->
   <div id="videoModal" class="video-modal" role="dialog" aria-modal="true" aria-label="Videó lejátszó">
