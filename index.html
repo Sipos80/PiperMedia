@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Piper Media | Portfolio</title>
-  
-<!-- Montserrat Betűtípus behívása -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Külső CSS fájl behívása -->
+  <title>Piper Media | Egyedi Zeneszerzés & Videógyártás</title>
+
+  <!-- Montserrat Betűtípus behívása -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Moduláris fő CSS fájl behívása (ami behívja a css/ mappában lévő modulokat) -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,9 +20,10 @@
     <div class="nav-container">
       <div class="logo">PIPER MEDIA</div>
       <ul class="nav-links">
-        <li><a href="#video">Videók</a></li>
-        <li><a href="#audio">Zene & Sound Design</a></li>
-        <li><a href="#services">Szolgáltatások</a></li>
+        <li><a href="#zeneszerzes">Zeneszerzés</a></li>
+        <li><a href="#videogyartas">Videógyártás</a></li>
+        <li><a href="#videovagas">Videóvágás</a></li>
+        <li><a href="#stock-zene">Stock Zene</a></li>
         <li><a href="#contact">Kapcsolat</a></li>
       </ul>
     </div>
@@ -31,28 +32,94 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Kreatív Videógyártás & Zenei Rendezettség</h1>
-      <p>Látványos mozgóképek, egyedi filmzenék és professzionális sound design egy kézből.</p>
+      <h1>Zene és Mozgókép Egyetlen Kézben</h1>
+      <p>Egyedi szimfonikus és hibrid filmzenék, professzionális forgatás és precíz utómunka.</p>
       <a href="#contact" class="btn">Projekt indítása</a>
     </div>
   </section>
 
-  <!-- Video Section -->
-  <section id="video">
-    <h2 class="section-title">Videógyártás & Vágás</h2>
+  <!-- 1. SEKTION: ZENESZERZÉS (Nemzetközi verseny elismeréssel) -->
+  <section id="zeneszerzes">
+    <div class="section-header">
+      <span class="badge">Akkreditált & Nemzetközi Elismerés</span>
+      <h2 class="section-title">Egyedi Zeneszerzés & Sound Design</h2>
+      <p class="section-desc">
+        Eredeti szimfonikus és hibrid filmzenék, akció- és drámai témák komponálása a legmodernebb virtuális zenekari eszközökkel.
+      </p>
+    </div>
+
+    <!-- KIEMELT STUDIO LEJÁTSZÓ (Music Cosmos verseny videó) -->
+    <div class="player-wrapper">
+      <div class="player-header">
+        <div class="window-dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div class="player-title">MUSIC COSMOS scoring contest — 4K MASTER</div>
+        <div class="player-status"><span class="live-indicator"></span> 4K HDR</div>
+      </div>
+
+      <div class="responsive-iframe cinematic-glow">
+        <iframe 
+          src="https://www.youtube.com/embed/bHW7389uW0Y?controls=0&rel=0&modestbranding=1&iv_load_policy=3" 
+          title="Who Should Decide - Music Cosmos Competition" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <div class="player-footer">
+        <div class="award-tag">🏆 Top 1% — 7. Helyezett</div>
+        <h3>WHO SHOULD DECIDE (Music Cosmos International Scoring Competition)</h3>
+        <p>Több mint 500 nemzetközi zeneszerző közül elért 7. helyezett versenymunka. Akció és drámai zenekari hangszerelés, dinamikus szekcióváltásokkal.</p>
+      </div>
+    </div>
+
+    <!-- POND5 STOCK KATALÓGUS LINK BANNER -->
+    <div id="stock-zene" class="pond5-banner">
+      <div class="pond5-content">
+        <h4>Licencelhető Stock Zenék & Témák</h4>
+        <p>Azonnal használható zenei sávok, háttérzenék és effektek az online katalógusban.</p>
+      </div>
+      <a href="https://www.pond5.com" target="_blank" rel="noopener" class="btn-pond5">
+        Pond5 Profil Megtekintése &rarr;
+      </a>
+    </div>
+  </section>
+
+  <!-- 2. SEKTION: VIDEÓGYÁRTÁS (Forgatás & Kameramunka) -->
+  <section id="videogyartas">
+    <div class="section-header">
+      <h2 class="section-title">Videógyártás & Kameramunka</h2>
+      <p class="section-desc">Helyszíni videófelvételek, imázsfilmek és rendezvények professzionális rögzítése.</p>
+    </div>
+
     <div class="portfolio-grid">
       <div class="card">
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/bHW7389uW0Y" title="YouTube video player" allowfullscreen loading="lazy"></iframe>
+        <div class="responsive-iframe">
+          <iframe 
+            src="https://www.youtube.com/embed/bHW7389uW0Y?controls=0&rel=0&modestbranding=1" 
+            title="Imázsfilm Forgatás" 
+            allowfullscreen 
+            loading="lazy">
+          </iframe>
         </div>
         <div class="card-body">
           <h3 class="card-title">Promóciós Videó / Imázsfilm</h3>
-          <p class="card-text">Dinamikus vágás, színkorrekció és vizuális effektek.</p>
+          <p class="card-text">Helyszíni forgatás, koncepció és precíz kameramunka.</p>
         </div>
       </div>
+
       <div class="card">
-        <div class="video-container">
-          <iframe src="https://www.youtube.com/embed/bHW7389uW0Y" title="YouTube video player" allowfullscreen loading="lazy"></iframe>
+        <div class="responsive-iframe">
+          <iframe 
+            src="https://www.youtube.com/embed/bHW7389uW0Y?controls=0&rel=0&modestbranding=1" 
+            title="Rendezvényvideó" 
+            allowfullscreen 
+            loading="lazy">
+          </iframe>
         </div>
         <div class="card-body">
           <h3 class="card-title">Rendezvény összefoglaló</h3>
@@ -62,37 +129,27 @@
     </div>
   </section>
 
-  <!-- Audio Section -->
-  <section id="audio">
-    <h2 class="section-title">Filmzene & Sound Design</h2>
+  <!-- 3. SEKTION: VIDEÓVÁGÁS & UTÓMUNKA -->
+  <section id="videovagas">
+    <div class="section-header">
+      <h2 class="section-title">Videóvágás & Post-Production</h2>
+      <p class="section-desc">Dinamikus vágás, színkorrekció (Color Grading) és vizuális effektek hozott vagy saját nyersanyagokból.</p>
+    </div>
+
     <div class="portfolio-grid">
       <div class="card">
-        <div class="card-body">
-          <h3 class="card-title">Eredeti Filmzenék</h3>
-          <p class="card-text">Szimfonikus és elektronikus hangszerelés filmekhez, reklámokhoz.</p>
-          <div class="soundcloud-wrapper">
-            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&color=%2300f2fe&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" loading="lazy"></iframe>
-          </div>
+        <div class="responsive-iframe">
+          <iframe 
+            src="https://www.youtube.com/embed/bHW7389uW0Y?controls=0&rel=0&modestbranding=1" 
+            title="Vágás és Színkorrekció" 
+            allowfullscreen 
+            loading="lazy">
+          </iframe>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services">
-    <h2 class="section-title">Szolgáltatások</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Videó Utómunka</h3>
-        <p>Vágás, Color Grading (színkorrekció), Fusion vizuális effektek és grafikai elemek.</p>
-      </div>
-      <div class="service-card">
-        <h3>Zeneszerzés</h3>
-        <p>Egyedi filmzenék, reklámzenék, dal hangszerelés és komplett válogatás.</p>
-      </div>
-      <div class="service-card">
-        <h3>Sound Design</h3>
-        <p>Hangutómunka, zörejezés (Foley), párbeszédek tisztítása és keverés (Mixing/Mastering).</p>
+        <div class="card-body">
+          <h3 class="card-title">Cinematic Color Grading & Utómunka</h3>
+          <p class="card-text">Log formátumú nyersanyagok feldolgozása, színvilág kialakítása és vizuális polírozás.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -100,7 +157,7 @@
   <!-- Contact / Footer -->
   <footer id="contact">
     <h2 class="section-title" style="margin-bottom: 1.5rem;">Lépjünk kapcsolatba</h2>
-    <p style="margin-bottom: 2rem;">Van egy projekted? Beszéljük meg a részleteket!</p>
+    <p style="margin-bottom: 2rem;">Van egy közös projekted? Beszéljük meg a részleteket!</p>
     <a href="mailto:info@pipermedia.hu" class="btn" style="margin-bottom: 3rem;">info@pipermedia.hu</a>
     <p>&copy; 2026 Piper Media. Minden jog fenntartva.</p>
   </footer>
