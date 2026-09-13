@@ -7,8 +7,8 @@ const videos = [
 
    {
       id: "SLnCjCTzyK0",
-      title: "WHO SHOULD DECIDE — Music Cosmos",
-      description: "Elődöntős helyezés az Amazon Frontlines zeneszerző versenyén, ahol 500-nál is több nevező közül bejutottam a legjobb 10 közé.",
+      title: "WHO SHOULD DECIDE",
+      description: "Az Amazon Frontlines zeneszerző versenyére készített díjnyertes pályaművem. Ez egy nemzetközi verseny volt melyen 500-nál is több nevező indult a világ minden tájáról. Bár nem végeztem az első helyen, de nagyon megtisztelő volt részt venni a díjátdón, ahol japán, olasz, francia zeneszerző társaimmal is megismerkedhettem.",
       poster: "https://img.youtube.com/vi/SLnCjCTzyK0/hqdefault.jpg"
    },
    {
