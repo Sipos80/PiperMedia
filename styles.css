@@ -272,8 +272,8 @@ header {
 }
 
 .contact-profile-img {
-  width: 95px;
-  height: 95px;
+  width: 128px;
+  height: 128px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--accent-cyan);
