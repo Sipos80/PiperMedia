@@ -20,7 +20,7 @@ const videos = [
    {
     id: "WTt3-uzIczY",
     title: "AVAchallenge2022",
-    description: "Ezen a versenyen kaptunk néhány hang fájlt és kizárólag ezek használatával kellett megoldani a sound designt. A videóban megmutatom hogyan építettem fel a hangot.",
+    description: "Ezen a versenyen kaptunk néhány hang fájlt és kizárólag ezek használatával lehetett megoldani a sound designt. A videóban megmutatom hogyan építettem fel a zenét.",
     poster: "https://img.youtube.com/vi/WTt3-uzIczY/hqdefault.jpg"
    },
 
