@@ -8,7 +8,7 @@ const videos = [
    {
       id: "SLnCjCTzyK0",
       title: "WHO SHOULD DECIDE",
-      description: "Az Amazon Frontlines zeneszerző versenyére készített díjnyertes pályaművem. Ezen a nemzetközi versenyen többszáz nevező közül választott ki a zsűri a fináléba a legjobb 10 közé.",
+      description: "Az Amazon Frontlines zeneszerző versenyére készített díjnyertes pályaművem. Ezen a nemzetközi versenyen több mint 500 nevező közül választott ki a zsűri a fináléba a legjobb 10 közé.",
       poster: "https://img.youtube.com/vi/SLnCjCTzyK0/hqdefault.jpg"
    },
    {
