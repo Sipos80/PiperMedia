@@ -272,6 +272,16 @@ section {
 /* ==========================================
    5. CONTACT & FOOTER
    ========================================== */
+
+.about-profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-cyan);
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+}
+
 .contact-section {
   padding: 4rem 2rem 6rem;
 }
