@@ -112,40 +112,45 @@
     </section>
   </main>
 
-  <!-- Kapcsolat Szekció -->
-  <section id="contact" class="contact-section">
-    <div class="section-header">
-      <h2 class="section-title">Kapcsolat</h2>
-      <p class="section-desc">Dolgozzunk együtt a következő projekteden!</p>
-    </div>
+<!-- Kapcsolat Szekció -->
+<section id="contact" class="contact-section">
+  <div class="section-header">
+    <h2 class="section-title">Kapcsolat</h2>
+    <p class="section-desc">Dolgozzunk együtt a következő projekteden!</p>
+  </div>
 
-    <div class="contact-card">
-      <!-- Portré fotó elhelyezése -->
+  <div class="contact-card">
+    <div class="contact-body">
+      <!-- Portré fotó (kisebb, kerek) -->
       <div class="contact-profile">
-        <img src="images/profile.png" alt="Sipos Attila Róbert - Piper Media" class="contact-profile-img">
+        <img src="images/profile.jpg" alt="Sipos Attila Róbert - Piper Media" class="contact-profile-img">
       </div>
 
-      <p>Kérdésed van, vagy árajánlatot szeretnél kérni? Írj bizalommal:</p>
-      
-      <div class="email-action-wrapper">
-        <!-- Megnyitja a levelező programot -->
-        <a href="mailto:piper.media.studio@gmail.com" class="contact-email-btn" title="E-mail küldése">
-          piper.media.studio@gmail.com
-        </a>
+      <!-- Szöveg és gombok konténere -->
+      <div class="contact-details">
+        <p class="contact-text">Kérdésed van, vagy árajánlatot szeretnél kérni? Írj bizalommal:</p>
+        
+        <div class="email-action-wrapper">
+          <!-- Megnyitja a levelező programot -->
+          <a href="mailto:piper.media.studio@gmail.com" class="contact-email-btn" title="E-mail küldése">
+            piper.media.studio@gmail.com
+          </a>
 
-        <!-- Kimásolja a címet vágólapra -->
-        <button type="button" id="copyBtn" class="copy-icon-btn" title="E-mail cím másolása" aria-label="E-mail cím másolása">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-          </svg>
-        </button>
+          <!-- Kimásolja a címet vágólapra -->
+          <button type="button" id="copyBtn" class="copy-icon-btn" title="E-mail cím másolása" aria-label="E-mail cím másolása">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          </button>
+        </div>
       </div>
-
-      <!-- Visszajelzés másoláskor -->
-      <div id="copyToast" class="copy-toast">E-mail cím kimásolva a vágólapra!</div>
     </div>
-  </section>
+
+    <!-- Visszajelzés másoláskor -->
+    <div id="copyToast" class="copy-toast">E-mail cím kimásolva a vágólapra!</div>
+  </div>
+</section>
 
   <script>
     document.getElementById('copyBtn').addEventListener('click', function() {
