@@ -18,10 +18,10 @@ const videos = [
     poster: "https://img.youtube.com/vi/-GozvYoGRDY/hqdefault.jpg"
    },
    {
-    id: "a358Gy9Pg1c",
-    title: "Végtelen álom",
-    description: "Dalszerzés, videóvágás. Végtelen zoom videó AI eszközökkel és Davinci Resolve használatával.",
-    poster: "https://img.youtube.com/vi/a358Gy9Pg1c/hqdefault.jpg"
+    id: "WTt3-uzIczY",
+    title: "AVAchallenge2022",
+    description: "Ezen a versenyen kaptunk néhány hang fájlt és kizárólag ezek használatával kellett megoldani a sound designt. A videóban megmutatom hogyan építettem fel a hangot.",
+    poster: "https://img.youtube.com/vi/WTt3-uzIczY/hqdefault.jpg"
    },
 
    {
