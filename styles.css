@@ -103,6 +103,27 @@ header {
 /* ==========================================
    3. HERO SECTION
    ========================================== */
+/* Hero Logó megjelenítés (kék karika és körvágás nélkül) */
+.hero-logo-wrapper {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-logo-img {
+  max-width: 220px; /* Szükség szerint állítható a mérete */
+  height: auto;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  /* Opcionális: Finom neon derengés a logó mögött kerek karika helyett: */
+  filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.3));
+}
+
 .hero {
   min-height: 70vh;
   display: flex;
