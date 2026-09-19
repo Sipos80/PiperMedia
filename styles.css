@@ -13,16 +13,15 @@
   --glass: rgba(15, 23, 42, 0.85);
 }
 
-/* Sima görgetés és a rögzített fejléc kitakarásának elkerülése */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
-}
-
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* Rögzített fejléc miatti eltolás */
 }
 
 body {
@@ -40,6 +39,32 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  display: block;
+}
+
+section {
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Common Section Headers */
+.section-header {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+}
+
+.section-desc {
+  color: var(--text-muted);
+  font-size: 1.05rem;
 }
 
 /* ==========================================
@@ -65,8 +90,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
-  border: none;
 }
 
 .logo {
@@ -101,7 +124,7 @@ header {
 }
 
 /* ==========================================
-   3. HERO SECTION (LOGÓVAL, KERET ÉS GLOW NÉLKÜL)
+   3. HERO SECTION
    ========================================== */
 .hero {
   min-height: 70vh;
@@ -120,38 +143,18 @@ header {
   width: 100%;
 }
 
-/* Logó tároló: Nincs háttér, nincs karika, nincs box-shadow */
 .hero-logo-wrapper,
 .hero-image-wrapper {
   flex: 0 0 220px;
   width: 220px;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  padding: 0 !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible;
 }
 
-.hero-logo-wrapper::before,
-.hero-logo-wrapper::after,
-.hero-image-wrapper::before,
-.hero-image-wrapper::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Maga a logó kép */
-.hero-logo-img,
-.hero-profile-img {
+.hero-logo-img {
   max-width: 100%;
   height: auto;
-  border-radius: 0 !important;
-  border: none !important;
-  box-shadow: none !important;
   object-fit: contain;
 }
 
@@ -180,32 +183,8 @@ header {
 }
 
 /* ==========================================
-   4. SECTIONS & SERVICES GRID
+   4. SERVICES SECTION
    ========================================== */
-section {
-  padding: 5rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-header {
-  text-align: center;
-  max-width: 750px;
-  margin: 0 auto 3.5rem auto;
-}
-
-.section-title {
-  font-size: 2.25rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  margin-bottom: 1rem;
-}
-
-.section-desc {
-  color: var(--text-muted);
-  font-size: 1.05rem;
-}
-
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -262,39 +241,57 @@ section {
 }
 
 /* ==========================================
-   5. CONTACT, ABOUT & FOOTER
+   5. CONTACT SECTION
    ========================================== */
-
-/* Személyes fotó stílusa az oldal aljára (Rólunk / Kapcsolat szekció) */
-.about-profile-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--accent-cyan);
-  box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
-}
-
 .contact-section {
   padding: 4rem 2rem 6rem;
 }
 
 .contact-card {
-  max-width: 600px;
+  max-width: 750px;
   margin: 0 auto;
-  text-align: center;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 2.5rem 2rem;
+  text-align: center;
 }
 
-.contact-card p {
+/* Vízszintes elrendezés a fotó és a gombok számára */
+.contact-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  text-align: left;
+}
+
+/* Kerek, szolid fényű profilfotó */
+.contact-profile {
+  flex-shrink: 0;
+}
+
+.contact-profile-img {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-cyan);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.3);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact-text {
   color: var(--text-muted);
   font-size: 1.05rem;
-  margin-bottom: 1.8rem;
 }
 
+/* E-mail gomb & másolás ikon */
 .email-action-wrapper {
   display: inline-flex;
   align-items: center;
@@ -305,14 +302,15 @@ section {
   border-radius: 50px;
   box-shadow: 0 4px 20px rgba(0, 242, 254, 0.25);
   max-width: 100%;
+  align-self: flex-start;
 }
 
 a.contact-email-btn {
   color: #ffffff !important;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 700;
   text-decoration: none !important;
-  padding: 0.8rem 1.5rem;
+  padding: 0.7rem 1.2rem;
   word-break: break-all;
 }
 
@@ -320,7 +318,7 @@ a.contact-email-btn {
   background: rgba(15, 23, 42, 0.6);
   border: none;
   color: #ffffff;
-  padding: 0.8rem;
+  padding: 0.7rem;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -349,6 +347,9 @@ a.contact-email-btn {
   visibility: visible;
 }
 
+/* ==========================================
+   6. FOOTER
+   ========================================== */
 footer {
   text-align: center;
   padding: 4rem 2rem 2rem;
@@ -358,7 +359,7 @@ footer {
 }
 
 /* ==========================================
-   6. RESPONSIVE MEDIA QUERIES
+   7. RESPONSIVE MEDIA QUERIES
    ========================================== */
 @media (max-width: 868px) {
   .hero-container {
@@ -383,5 +384,16 @@ footer {
 
   .nav-links {
     display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-body {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .email-action-wrapper {
+    align-self: center;
   }
 }
