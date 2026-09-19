@@ -14,7 +14,7 @@ const videos = [
    {
     id: "-GozvYoGRDY",
     title: "Piper Music - Trailer",
-    description: "Videó vágás, zeneszerzés, AI narráció.",
+    description: "Stock anyagokból vágott képi anyag egyedi zeneszerzéssel.",
     poster: "https://img.youtube.com/vi/-GozvYoGRDY/hqdefault.jpg"
    },
    {
