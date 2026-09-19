@@ -101,29 +101,8 @@ header {
 }
 
 /* ==========================================
-   3. HERO SECTION
+   3. HERO SECTION (LOGÓVAL, KERET ÉS GLOW NÉLKÜL)
    ========================================== */
-/* Hero Logó megjelenítés (kék karika és körvágás nélkül) */
-.hero-logo-wrapper {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-logo-img {
-  max-width: 220px; /* Szükség szerint állítható a mérete */
-  height: auto;
-  border-radius: 0 !important;
-  border: none !important;
-  box-shadow: none !important;
-  /* Opcionális: Finom neon derengés a logó mögött kerek karika helyett: */
-  filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.3));
-}
-
 .hero {
   min-height: 70vh;
   display: flex;
@@ -141,26 +120,39 @@ header {
   width: 100%;
 }
 
+/* Logó tároló: Nincs háttér, nincs karika, nincs box-shadow */
+.hero-logo-wrapper,
 .hero-image-wrapper {
-  flex: 0 0 240px;
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  padding: 3px;
-  background: linear-gradient(45deg, var(--accent-cyan), var(--accent-purple));
-  box-shadow: 0 0 20px rgba(0, 242, 254, 0.25);
+  flex: 0 0 220px;
+  width: 220px;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
 }
 
-.hero-image-wrapper img.hero-profile-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
+.hero-logo-wrapper::before,
+.hero-logo-wrapper::after,
+.hero-image-wrapper::before,
+.hero-image-wrapper::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Maga a logó kép */
+.hero-logo-img,
+.hero-profile-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  object-fit: contain;
 }
 
 .hero-content {
@@ -270,9 +262,10 @@ section {
 }
 
 /* ==========================================
-   5. CONTACT & FOOTER
+   5. CONTACT, ABOUT & FOOTER
    ========================================== */
 
+/* Személyes fotó stílusa az oldal aljára (Rólunk / Kapcsolat szekció) */
 .about-profile-img {
   width: 180px;
   height: 180px;
@@ -378,10 +371,10 @@ footer {
     text-align: center;
   }
 
+  .hero-logo-wrapper,
   .hero-image-wrapper {
     flex: 0 0 180px;
     width: 180px;
-    height: 180px;
   }
 
   .hero h1 {
