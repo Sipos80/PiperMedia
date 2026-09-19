@@ -20,8 +20,15 @@ const videos = [
    {
     id: "a358Gy9Pg1c",
     title: "Végtelen álom",
-    description: "Dalszerzés, videóvágás. Végtelen zoom videó AI eszközökkel és Davinci Resolve segítségével.",
+    description: "Dalszerzés, videóvágás. Végtelen zoom videó AI eszközökkel és Davinci Resolve használatával.",
     poster: "https://img.youtube.com/vi/a358Gy9Pg1c/hqdefault.jpg"
+   },
+
+   {
+    id: "EnJzh_8LiT0",
+    title: "Sprite Fright",
+    description: "Egyedi zeneszerzés filmekhez.",
+    poster: "https://img.youtube.com/vi/EnJzh_8LiT0/hqdefault.jpg"
    },
    
    {
@@ -38,13 +45,6 @@ const videos = [
     poster: "https://img.youtube.com/vi/qLRmNFddtgA/hqdefault.jpg"
    },
    
-   {
-    id: "EnJzh_8LiT0",
-    title: "Sprite Fright",
-    description: "Egyedi zeneszerzés filmekhez.",
-    poster: "https://img.youtube.com/vi/EnJzh_8LiT0/hqdefault.jpg"
-   },
-
    {
     id: "r4qJ9314RqM",
     title: "Colossus Re-Scoring Competition",
