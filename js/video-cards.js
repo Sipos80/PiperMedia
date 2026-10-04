@@ -41,28 +41,28 @@ const videos = [
    {
     id: "qLRmNFddtgA",
     title: "Stargirl",
-    description: "A Spitfire zeneszerző versenye, melynek érdekessége, hogy a teljes zenét kizárólag a Spitfire ingyenes hangszereivel készítettem el.",
+    description: "A Spitfire zeneszerző versenye, melyen a Stargirl sorozat egy jelenetét kellett megzenésíteni. A teljes zenét kizárólag a Spitfire LABS ingyenes hangszereivel készítettem el.",
     poster: "https://img.youtube.com/vi/qLRmNFddtgA/hqdefault.jpg"
    },
    
    {
     id: "r4qJ9314RqM",
     title: "Colossus Re-Scoring Competition",
-    description: "Mivel magát a képi anyagot a Mátrix című film ihlette, ezért a zenémben én is visszanyúltam a klasszikushoz.",
+    description: "Mivel a képi anyagot erősen a Mátrix című film ihlette, ezért a zenémben én is bátorkodtam visszanyúlni a klasszikushoz.",
     poster: "https://img.youtube.com/vi/r4qJ9314RqM/hqdefault.jpg"
    },
 
    {
     id: "DeFkxaiwTEU",
     title: "Sonuscore - Composer Of The Year Award 2023",
-    description: "A Sonuscore versenye, melyen a legnagyobb kihívás az volt, hogy a hangszerek a képpel szinkronban a megfelelő pillanatokban szólaljanak meg.",
+    description: "A Sonuscore versenye, melyben a legnagyobb kihívás az volt, hogy a hangszereken játszott hangok a képpel szinkronban a megfelelő pillanatokban szólaljanak meg.",
     poster: "https://img.youtube.com/vi/DeFkxaiwTEU/hqdefault.jpg"
    },
 
    {
     id: "ayCn3sQRKRs",
     title: "Tellurian",
-    description: "A Sonuscore versenye. A célom itt is egy egyedi trailer zene készítése volt.",
+    description: "A Tellurian című film előzetese. Nem akartam tipikus trailer zenét csinálni, ezért kicsit másképp álltam a feladathoz. ",
     poster: "https://img.youtube.com/vi/ayCn3sQRKRs/hqdefault.jpg"
    }
    
