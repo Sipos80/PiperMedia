@@ -8,7 +8,7 @@ const videos = [
    {
       id: "SLnCjCTzyK0",
       title: "WHO SHOULD DECIDE",
-      description: "Az Amazon Frontlines zeneszerző versenyére készített díjnyertes pályaművem. Ezen a nemzetközi versenyen több mint 500 nevező közül választott ki a zsűri a fináléba a legjobb 10 közé.",
+      description: "Az Amazon Frontlines zeneszerző versenyére készített díjnyertes pályaművem. Ezen a nemzetközi versenyen több mint 500 nevező közül választott ki a zsűri a fináléba a legjobb 10 közé. A célom egy olyan zene készítése volt, amely átadja a területre jellemző törzsi hangulatot miközben a kilátástalan helyzett miatti szomorúság is érezhető benne.",
       poster: "https://img.youtube.com/vi/SLnCjCTzyK0/hqdefault.jpg"
    },
    {
@@ -27,42 +27,42 @@ const videos = [
    {
     id: "EnJzh_8LiT0",
     title: "Sprite Fright",
-    description: "Egyedi zeneszerzés filmekhez.",
+    description: "Az első teljes ívű történet, melyhez zenét szereztem. A film elején varázslatos, rejtélyes hangulatot szerettem volna, majd kicsit játékosabb hangulat következett, végül pedig elszabadult a pokol. Az egyik kedvencem...",
     poster: "https://img.youtube.com/vi/EnJzh_8LiT0/hqdefault.jpg"
    },
    
    {
     id: "bHW7389uW0Y",
     title: "Bridgerton",
-    description: "Egyedi zeneszerzés filmekhez.",
+    description: "A híres sorozat egyik részének nyitójelenete. A várakozásoknak megfelelően a legtöbb pályázó tisztán szimfónikus zenével nevezett. Én gondoltam egy merészet és inkább a korabeli népzenei hangszereket helyeztem fókuszba.",
     poster: "https://img.youtube.com/vi/bHW7389uW0Y/hqdefault.jpg"
   },
    
    {
     id: "qLRmNFddtgA",
     title: "Stargirl",
-    description: "Egyedi zeneszerzés filmekhez.",
+    description: "A Spitfire zeneszerző versenye, melynek érdekessége, hogy a teljes zenét kizárólag a Spitfire ingyenes hangszereivel készítettem el.",
     poster: "https://img.youtube.com/vi/qLRmNFddtgA/hqdefault.jpg"
    },
    
    {
     id: "r4qJ9314RqM",
     title: "Colossus Re-Scoring Competition",
-    description: "Egyedi zeneszerzés trailerhez.",
+    description: "Mivel magát a képi anyagot a Mátrix című film ihlette, ezért a zenémben én is visszanyúltam a klasszikushoz.",
     poster: "https://img.youtube.com/vi/r4qJ9314RqM/hqdefault.jpg"
    },
 
    {
     id: "DeFkxaiwTEU",
     title: "Sonuscore - Composer Of The Year Award 2023",
-    description: "Egyedi zeneszerzés trailerhez.",
+    description: "A Sonuscore versenye, melyen a legnagyobb kihívás az volt, hogy a hangszerek a képpel szinkronban a megfelelő pillanatokban szólaljanak meg.",
     poster: "https://img.youtube.com/vi/DeFkxaiwTEU/hqdefault.jpg"
    },
 
    {
     id: "ayCn3sQRKRs",
     title: "Tellurian",
-    description: "Egyedi zeneszerzés trailerhez.",
+    description: "A Sonuscore versenye. A célom itt is egy egyedi trailer zene készítése volt.",
     poster: "https://img.youtube.com/vi/ayCn3sQRKRs/hqdefault.jpg"
    }
    
