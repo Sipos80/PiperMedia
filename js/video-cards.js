@@ -54,7 +54,7 @@ const videos = [
 
    {
     id: "DeFkxaiwTEU",
-    title: "Sonuscore - Composer Of The Year Award 2023",
+    title: "Sonuscore - COTY 2023",
     description: "A Sonuscore versenye, melyben a legnagyobb kihívás az volt, hogy a hangszereken játszott hangok a képpel szinkronban a megfelelő pillanatokban szólaljanak meg.",
     poster: "https://img.youtube.com/vi/DeFkxaiwTEU/hqdefault.jpg"
    },
