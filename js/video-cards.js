@@ -8,7 +8,7 @@ const videos = [
    {
       id: "SLnCjCTzyK0",
       title: "WHO SHOULD DECIDE",
-      description: "Az Amazon Frontlines zeneszerző versenyére készített díjnyertes pályaművem. Ezen a nemzetközi versenyen több mint 500 nevező közül választott ki a zsűri a fináléba a legjobb 10 közé. A célom egy olyan zene készítése volt, amely átadja a területre jellemző törzsi hangulatot miközben a kilátástalan helyzett miatti szomorúság is érezhető benne.",
+      description: "Az Amazon Frontlines zeneszerző versenyére készített díjnyertes pályaművem. Ezen a nemzetközi versenyen több mint 500 nevező közül választott ki a zsűri a fináléba a legjobb 10 közé. ",
       poster: "https://img.youtube.com/vi/SLnCjCTzyK0/hqdefault.jpg"
    },
    {
@@ -20,14 +20,14 @@ const videos = [
    {
     id: "WTt3-uzIczY",
     title: "AVAchallenge2022",
-    description: "Ezen a versenyen kaptunk néhány hang fájlt és kizárólag ezek használatával lehetett megoldani a sound designt. A videóban megmutatom hogyan építettem fel a zenét.",
+    description: "Ezen a versenyen kaptunk néhány hangfájlt és kizárólag ezek használatával lehetett megoldani a sounddesignt. A videóban megmutatom hogyan építettem fel a zenét.",
     poster: "https://img.youtube.com/vi/WTt3-uzIczY/hqdefault.jpg"
    },
 
    {
     id: "EnJzh_8LiT0",
     title: "Sprite Fright",
-    description: "Az első teljes ívű történet, melyhez zenét szereztem. A film elején varázslatos, rejtélyes hangulatot szerettem volna, majd kicsit játékosabb hangulat következett, végül pedig elszabadult a pokol. Az egyik kedvencem...",
+    description: "Az első teljes ívű történet, melyhez zenét szereztem. Az egyik kedvencem...",
     poster: "https://img.youtube.com/vi/EnJzh_8LiT0/hqdefault.jpg"
    },
    
