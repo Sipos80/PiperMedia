@@ -27,7 +27,7 @@ const videos = [
    {
     id: "EnJzh_8LiT0",
     title: "Sprite Fright",
-    description: "Az első teljes ívű történet, melyhez zenét szereztem. Nem is írnék többet róla. Nem hosszú, érdemes végignézni. Az egyik kedvencem...",
+    description: "Az első teljes ívű történet, melyhez zenét szereztem. Nem is írnék többet róla, érdemes végignézni. Az egyik kedvencem...",
     poster: "https://img.youtube.com/vi/EnJzh_8LiT0/hqdefault.jpg"
    },
    
