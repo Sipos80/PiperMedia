@@ -20,7 +20,7 @@ const videos = [
    {
     id: "SSz6g4NBlCs",
     title: "Magyarok Fénye",
-    description: "",
+    description: "Magyarok fénye című rockopera online hirdetése.",
     poster: "https://img.youtube.com/vi/SSz6g4NBlCs/hqdefault.jpg"
    },
 
