@@ -7,7 +7,7 @@ const videos = [
    {
       id: "NzoNYFDY4G8",
       title: "Miért érdemes videót csinálni?",
-      description: "Megtudhatod, miért érdemes rendszeresen videót készíteni a vállalkozásod számára. Egy posztban a követőidhez szólsz elsősorban, de ők már ismernek. Egy nyilvános videóval viszont a potenciális ügyfeleid találhatnak nagyobb eséllyel rád. Hogy miért? Mert a közösségi oldalak az érdeklődési körünknek megfelelően ajánlják a videókat. Ha a videód jól bemutatja mit is csinálsz, szinte biztos, hogy a legtöbb megtekintés olyan embereknél lesz, akiket érdekel is ez a téma. Tehát nem vaktában lövöldözünk.",
+      description: "Megtudhatod, miért érdemes rendszeresen videót készíteni a vállalkozásod számára. Egy posztban a követőidhez szólsz elsősorban, de ők már ismernek. Egy nyilvános videóval viszont a potenciális ügyfeleid találhatnak nagyobb eséllyel rád. Videó közben egyedi zene hallható. Minden jog fenntartva 2026 Sipos Attila.",
       poster: "https://img.youtube.com/vi/NzoNYFDY4G8/hqdefault.jpg"
    },
    {
