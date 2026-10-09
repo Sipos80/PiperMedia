@@ -13,7 +13,7 @@ const videos = [
    {
     id: "hsvqa23Tcwg",
     title: "Pizzéria hirdetés",
-    description: "Stock anyagokból készített hirdetés. Természetesen a hirdetésedet, saját képi anyagodból is elkészítem, vagy rendelhetsz forgatást is tőlem. Ez egy demo anyag, ami bemutatja, hogy milyen minőségre számíthatsz tőlem hétről-hétre.",
+    description: "Stock anyagokból készített hirdetés. Ez egy demo anyag, ami bemutatja, hogy milyen minőségre számíthatsz tőlem hétről-hétre. Természetesen a hirdetésedet, saját képi anyagodból is elkészítem, vagy rendelhetsz forgatást is tőlem.",
     poster: "https://img.youtube.com/vi/hsvqa23Tcwg/hqdefault.jpg"
    },
    
