@@ -7,7 +7,7 @@ const videos = [
    {
       id: "NzoNYFDY4G8",
       title: "Miért érdemes videót csinálni?",
-      description: "",
+      description: "Megtudhatod, miért érdemes rendszeresen videót készíteni a vállalkozásod számára. Egy posztban a követőidhez szólsz elsősorban, de ők már ismernek. Egy nyilvános videóval viszont a potenciális ügyfeleid találhatnak nagyobb eséllyel rád. Hogy miért? Mert a közösségi oldalak az érdeklődési körünknek megfelelően ajánlják a videókat. Persze ez egy összetett, bonyolult dolog. De, ha például a főzés érdekel minket, akkor főzéssel kapcsolatos lesz a legtöbb videó, amit kapunk. Ha a videód jól bemutatja mit is csinálsz, szinte biztos, hogy a legtöbb megtekintés olyan embereknél lesz, akiket érdekel is ez a téma. Tehát nem vaktában lövöldözünk.",
       poster: "https://img.youtube.com/vi/NzoNYFDY4G8/hqdefault.jpg"
    },
    {
