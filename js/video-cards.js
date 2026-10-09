@@ -1,4 +1,4 @@
-és/* ==========================================
+ésés/* ==========================================
    PIPER MEDIA - VIDEÓK ADATAI ÉS KÁRTYA GENERÁLÓ
    ========================================== */
 
@@ -12,7 +12,7 @@ const videos = [
    },
    {
     id: "hsvqa23Tcwg",
-    title: "Pizzéria reklám",
+    title: "Pizzéria hirdetés",
     description: "Stock anyagokból készített hirdetés. Természetesen a hirdetésedet, saját képi anyagodból is elkészítem, vagy ha forgatást rendelsz tőlem, akkor elmegyek hozzád és megmutathatod az én kamerámnak, amit a videódban szeretnél látni.",
     poster: "https://img.youtube.com/vi/hsvqa23Tcwg/hqdefault.jpg"
    },
