@@ -4,6 +4,25 @@
 
 // 1. VIDEÓK LISTÁJA
 const videos = [
+   {
+      id: "NzoNYFDY4G8",
+      title: "Miért videó?",
+      description: "",
+      poster: "https://img.youtube.com/vi/NzoNYFDY4G8/hqdefault.jpg"
+   },
+   {
+    id: "hsvqa23Tcwg",
+    title: "Pizzéria reklám",
+    description: "",
+    poster: "https://img.youtube.com/vi/hsvqa23Tcwg/hqdefault.jpg"
+   },
+   
+   {
+    id: "SSz6g4NBlCs",
+    title: "Magyarok Fénye",
+    description: "",
+    poster: "https://img.youtube.com/vi/SSz6g4NBlCs/hqdefault.jpg"
+   },
 
    {
       id: "SLnCjCTzyK0",
