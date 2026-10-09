@@ -6,7 +6,7 @@
 const videos = [
    {
       id: "NzoNYFDY4G8",
-      title: "Miért videó?",
+      title: "Miért érdemes videót csinálni?",
       description: "",
       poster: "https://img.youtube.com/vi/NzoNYFDY4G8/hqdefault.jpg"
    },
