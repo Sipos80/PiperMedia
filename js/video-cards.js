@@ -7,20 +7,20 @@ const videos = [
    {
       id: "NzoNYFDY4G8",
       title: "Miért érdemes videót csinálni?",
-      description: "Megtudhatod, miért érdemes rendszeresen videót készíteni a vállalkozásod számára. Egy posztban a követőidhez szólsz elsősorban, de ők már ismernek. Egy nyilvános videóval viszont a potenciális ügyfeleid találhatnak nagyobb eséllyel rád. Videó közben egyedi zene hallható. Minden jog fenntartva 2026 Sipos Attila.",
+      description: "Egy nyilvános videóval a potenciális ügyfeleid könnyebben rádtalálhatnek. Videó közben egyedi zeneszerzés hallható: Minden jog fenntartva 2026 Sipos Attila.",
       poster: "https://img.youtube.com/vi/NzoNYFDY4G8/hqdefault.jpg"
    },
    {
     id: "hsvqa23Tcwg",
     title: "Hirdetés - Pizzéria hirdetés",
-    description: "Stock anyagokból készített hirdetés. Ez egy demo anyag, ami bemutatja, hogy milyen minőségre számíthatsz tőlem hétről-hétre. Természetesen a videóidat saját képi anyagodból is elkészítem, vagy rendelhetsz forgatást is tőlem.",
+    description: "Egy demo anyag, ami bemutatja, hogy milyen minőségre számíthatsz tőlem. A videóban stock videókat használtam, AI narrációt, AI zenét és hangutómunkát is tartalmaz. Természetesen a videóidat saját képi- és hanganyagodból is elkészítem, vagy rendelhetsz forgatást is tőlem.",
     poster: "https://img.youtube.com/vi/hsvqa23Tcwg/hqdefault.jpg"
    },
    
    {
     id: "SSz6g4NBlCs",
     title: "Hirdetés - Magyarok Fénye",
-    description: "A Magyarok Fénye című rockopera egyik előadásához készített hirdetésem.",
+    description: "A Magyarok Fénye című rockopera egyik előadásához készített hirdetésem. Küldött képi- és hanganyagból vágott, AI narrációval ellátott hirdetés teljesen a megrendelő igényeire szabva.",
     poster: "https://img.youtube.com/vi/SSz6g4NBlCs/hqdefault.jpg"
    },
 
@@ -33,7 +33,7 @@ const videos = [
    {
     id: "-GozvYoGRDY",
     title: "Hirdetés - Piper Music",
-    description: "Stock anyagokból vágott trailer egyedi zeneszerzéssel és AI narrációval.",
+    description: "Stock videókból vágott trailer egyedi zeneszerzéssel és AI narrációval.",
     poster: "https://img.youtube.com/vi/-GozvYoGRDY/hqdefault.jpg"
    },
    {
