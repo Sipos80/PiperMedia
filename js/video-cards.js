@@ -21,7 +21,7 @@ const videos = [
    {
     id: "WTt3-uzIczY",
     title: "Sounddesing - Ableton Live",
-    description: "Ezen a versenyen kaptunk néhány hangeffektet és kizárólag ezek használatával lehetett megoldani a sounddesignt. A videóban megmutatom hogyan építettem fel a projektet.",
+    description: "Ezen a versenyen néhány hangeffektből kellett felépítenünk a trailer teljes hangzásvilágát. Kizárólag a kapott hangmintákat használhattuk, még a zene is ezekből született. A videóban bemutatom, hogyan építettem fel a projektet a hangminták kreatív átalakításával és rétegezésével.",
     poster: "https://img.youtube.com/vi/WTt3-uzIczY/hqdefault.jpg"
    },
  
