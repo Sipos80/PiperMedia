@@ -10,13 +10,21 @@ const videos = [
       description: "Egy nyilvános videóval a potenciális ügyfeleid könnyebben rádtalálhatnek. Videó közben egyedi zeneszerzés hallható: Minden jog fenntartva 2026 Sipos Attila.",
       poster: "https://img.youtube.com/vi/NzoNYFDY4G8/hqdefault.jpg"
    },
+
    {
-    id: "hsvqa23Tcwg",
-    title: "Hirdetés - Pizzéria hirdetés",
-    description: "Egy demo anyag, ami bemutatja, hogy milyen minőségre számíthatsz tőlem. A videóban stock videókat használtam, AI narrációt, AI zenét és hangutómunkát is tartalmaz. Természetesen a videóidat saját képi- és hanganyagodból is elkészítem, vagy rendelhetsz forgatást is tőlem.",
-    poster: "https://img.youtube.com/vi/hsvqa23Tcwg/hqdefault.jpg"
+      id: "SLnCjCTzyK0",
+      title: "Díjnyertes filmzene",
+      description: "Az Amazon Frontlines zeneszerző versenyére készített díjnyertes pályaművem. Ezen a nemzetközi versenyen több mint 500 nevező közül választott ki a zsűri a fináléba a legjobb 10 közé. ",
+      poster: "https://img.youtube.com/vi/SLnCjCTzyK0/hqdefault.jpg"
    },
    
+   {
+    id: "WTt3-uzIczY",
+    title: "Zeneszerzés - AVAchallenge2022",
+    description: "Ezen a versenyen kaptunk néhány hangfájlt és kizárólag ezek használatával lehetett megoldani a sounddesignt. A videóban megmutatom hogyan építettem fel a zenét.",
+    poster: "https://img.youtube.com/vi/WTt3-uzIczY/hqdefault.jpg"
+   },
+ 
    {
     id: "SSz6g4NBlCs",
     title: "Hirdetés - Magyarok Fénye",
@@ -25,22 +33,17 @@ const videos = [
    },
 
    {
-      id: "Zeneszerzés - SLnCjCTzyK0",
-      title: "WHO SHOULD DECIDE",
-      description: "Az Amazon Frontlines zeneszerző versenyére készített díjnyertes pályaművem. Ezen a nemzetközi versenyen több mint 500 nevező közül választott ki a zsűri a fináléba a legjobb 10 közé. ",
-      poster: "https://img.youtube.com/vi/SLnCjCTzyK0/hqdefault.jpg"
+    id: "hsvqa23Tcwg",
+    title: "Hirdetés - Fiktív hirdetés",
+    description: "Egy demo anyag, ami bemutatja, hogy milyen minőségre számíthatsz tőlem. A videóban stock videókat használtam, AI narrációt, AI zenét és hangutómunkát is tartalmaz. Természetesen a videóidat saját képi- és hanganyagodból is elkészítem, vagy rendelhetsz forgatást is tőlem.",
+    poster: "https://img.youtube.com/vi/hsvqa23Tcwg/hqdefault.jpg"
    },
+   
    {
     id: "-GozvYoGRDY",
     title: "Hirdetés - Piper Music",
     description: "Stock videókból vágott trailer egyedi zeneszerzéssel és AI narrációval.",
     poster: "https://img.youtube.com/vi/-GozvYoGRDY/hqdefault.jpg"
-   },
-   {
-    id: "WTt3-uzIczY",
-    title: "Zeneszerzés - AVAchallenge2022",
-    description: "Ezen a versenyen kaptunk néhány hangfájlt és kizárólag ezek használatával lehetett megoldani a sounddesignt. A videóban megmutatom hogyan építettem fel a zenét.",
-    poster: "https://img.youtube.com/vi/WTt3-uzIczY/hqdefault.jpg"
    },
 
    {
