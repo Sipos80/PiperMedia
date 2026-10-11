@@ -20,8 +20,8 @@ const videos = [
    
    {
     id: "WTt3-uzIczY",
-    title: "Zeneszerzés - AVAchallenge2022",
-    description: "Ezen a versenyen kaptunk néhány hangfájlt és kizárólag ezek használatával lehetett megoldani a sounddesignt. A videóban megmutatom hogyan építettem fel a zenét.",
+    title: "Sounddesing - Ableton Live",
+    description: "Ezen a versenyen kaptunk néhány hangeffektet és kizárólag ezek használatával lehetett megoldani a sounddesignt. A videóban megmutatom hogyan építettem fel a projektet.",
     poster: "https://img.youtube.com/vi/WTt3-uzIczY/hqdefault.jpg"
    },
  
